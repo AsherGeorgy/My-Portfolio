@@ -50,6 +50,8 @@ This tool helps Clash of Clans players plan their Hero Equipment upgrades based 
   - will need 272 days to upgrade Frozen Arrow from level 17 to 27. The Dashboard will look like this:
 ![Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Example%20Usage.png))
 
+## Reddit Post
+Received positive responses on Reddit [Link to Reddit Post](https://www.reddit.com/r/ClashOfClans/comments/1atwpa1/plan_your_hero_equipment_upgrades_using_this/)
 
 ## Feedback and Support
 
