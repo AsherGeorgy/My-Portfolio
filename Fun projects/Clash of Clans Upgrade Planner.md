@@ -33,11 +33,11 @@ This tool helps Clash of Clans players plan their Hero Equipment upgrades based 
    - Use the 'My Upgrade Plan' section to jot down long term upgrade plans.
 
 ## Screenshots
-![Dashboard](assets/Clash of Clans Upgrade Planner/Dashboard.png)
+![Dashboard](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Dashboard.png)
 
 ---
 
-![Data and Lookup](assets/Clash of Clans Upgrade Planner/Data and Lookup.png)
+![Data and Lookup](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Data%20and%20Lookup.png))
 
 ---
 
@@ -48,7 +48,7 @@ This tool helps Clash of Clans players plan their Hero Equipment upgrades based 
     - 680 Glowy Ores    
     - 32 Starry Ores
   - will need 272 days to upgrade Frozen Arrow from level 17 to 27. The Dashboard will look like this:
-![Example](https://github.com/ashergeo/My-Portfolio/assets/145012626/da403622-c8fa-4a76-96d5-070ac5eb7d9b)
+![Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Example%20Usage.png))
 
 
 ## Feedback and Support
