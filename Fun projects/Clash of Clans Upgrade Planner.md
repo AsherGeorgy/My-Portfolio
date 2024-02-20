@@ -52,9 +52,9 @@ The Dashboard will look like this:
 
 ## Feedback and Support
 
-Feel free to reach out with any questions or feedback: [georgy.asher@gmail.com](mailto:georgy.asher@gmail.com)
+Reach me at [georgy.asher@gmail.com](mailto:georgy.asher@gmail.com)
 
-Your input is appreciated, and I'm here to assist with any inquiries or suggestions.
+Your input is appreciated.
 
 ---
 
