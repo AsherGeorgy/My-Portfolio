@@ -2,7 +2,7 @@
 
 ## Overview
 
-I developed a monthly cash flow manager for a church using Excel. This system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month. Download it [here](https://github.com/ashergeo/My-Portfolio/files/14229876/Expense.Register.xlsx)
+I developed a monthly cash flow manager for a church using Excel. This system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month. Download it [here](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Expense.Register.xlsx)
 
 ## How It Works
 
@@ -25,11 +25,11 @@ This cash register system has streamlined transaction tracking for the church, p
 </br>
 
 #### *Screenshots:*
-![Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Accounting/Register.png)
+![Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Register.png)
 
 ---
 
-![Summary](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Accounting/Summary.png)
+![Summary](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Summary.png)
 
 ---
 
