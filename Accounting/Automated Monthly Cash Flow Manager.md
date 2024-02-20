@@ -25,6 +25,6 @@ This cash register system has streamlined transaction tracking for the local chu
 </br>
 
 #### *Screenshots:*
-![Register](https://github.com/ashergeo/My-Portfolio/assets/145012626/8e2f9564-cd35-44a8-bd94-dcf100f1d8ae)
-![Summary](https://github.com/ashergeo/My-Portfolio/assets/145012626/9ab1fe0f-55fd-44c0-9759-6fc015299072)
+![Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Accounting/Register.png)
+![Summary](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Accounting/Summary.png)
 
