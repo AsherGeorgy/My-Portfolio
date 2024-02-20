@@ -36,11 +36,11 @@ This tool helps Clash of Clans players plan their Hero Equipment upgrades based 
    - Use the 'My Upgrade Plan' section to jot down long term upgrade plans.
 
 ## Screenshots
-![Dashboard](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Dashboard.png)
+![Dashboard](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Fun%20projects/Dashboard.png)
 
 ---
 
-![Data and Lookup](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Data%20and%20Lookup.png)
+![Data and Lookup](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Fun%20projects/Data%20and%20Lookup.png)
 
 ---
 
@@ -49,7 +49,7 @@ A **Townhall 15 at Champion III** that wars once a week and has a blacksmith bal
 The Dashboard will look like this:
 
 --- 
-![Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Example%20Usage.png) 
+![Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Fun%20projects/Example%20Usage.png)
 
 ---
 
