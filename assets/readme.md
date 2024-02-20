@@ -1,1 +1,1 @@
-Hosts all pictures and other assets for each file in this repository. 
+# **This folder hosts all assets for the files in this repository.** 
