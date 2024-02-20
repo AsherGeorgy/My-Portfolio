@@ -1,6 +1,9 @@
 # Clash of Clans Hero Equipment Upgrade Planner
 
-Greetings, Clashers! Following the positive response received on the Reddit [post](https://www.reddit.com/r/ClashOfClans/comments/1atwpa1/plan_your_hero_equipment_upgrades_using_this/), here's the GitHub page for the Clash of Clans Hero Equipment Upgrade Planner. I'll continuously update the Google Sheets link here to accommodate new game updates. Contributions welcome.
+Greetings, Clashers! 
+
+   
+Following the positive response received on the Reddit [post](https://www.reddit.com/r/ClashOfClans/comments/1atwpa1/plan_your_hero_equipment_upgrades_using_this/), here's the GitHub page for the Clash of Clans Hero Equipment Upgrade Planner. I'll continuously update the Google Sheets link here to accommodate new game updates. Contributions welcome!
 
 ## Overview
 
