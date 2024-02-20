@@ -1,6 +1,6 @@
 # Clash of Clans Hero Equipment Upgrade Planner
 
-👋 Hi Clashers! Welcome to the Clash of Clans Hero Equipment Upgrade Planner - your go-to tool for efficient Hero Equipment upgrades!
+Greetings, Clashers! Following the positive response received on the Reddit [post](https://www.reddit.com/r/ClashOfClans/comments/1atwpa1/plan_your_hero_equipment_upgrades_using_this/), here's the GitHub page for the Clash of Clans Hero Equipment Upgrade Planner. I'll continuously update the Google Sheets link here to accommodate new game updates. Contributions welcome.
 
 ## Overview
 
@@ -37,21 +37,18 @@ This tool helps Clash of Clans players plan their Hero Equipment upgrades based 
 
 ---
 
-![Data and Lookup](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Data%20and%20Lookup.png))
+![Data and Lookup](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Data%20and%20Lookup.png)
 
 ---
 
 ## Example Usage
-**Scenario: Townhall 15 at Champion III**
-  - A Townhall 15 at Champion III that wars once a week and has a blacksmith balance of 
-    - 15529 Shiny Ores    
-    - 680 Glowy Ores    
-    - 32 Starry Ores
-  - will need 272 days to upgrade Frozen Arrow from level 17 to 27. The Dashboard will look like this:
-![Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Example%20Usage.png))
+A **Townhall 15 at Champion III** that wars once a week and has a blacksmith balance of [15529 Shiny Ores, 680 Glowy Ores and 32 Starry Ores] will need 272 days to upgrade Frozen Arrow from level 17 to 27. 
+The Dashboard will look like this:
 
-## Reddit Post
-Received positive responses on Reddit [Link to Reddit Post](https://www.reddit.com/r/ClashOfClans/comments/1atwpa1/plan_your_hero_equipment_upgrades_using_this/)
+--- 
+![Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Clash%20of%20Clans%20Upgrade%20Planner/Example%20Usage.png) 
+
+---
 
 ## Feedback and Support
 
@@ -62,4 +59,3 @@ Your input is appreciated, and I'm here to assist with any inquiries or suggesti
 ---
 
 *Happy Clashing!*
-
