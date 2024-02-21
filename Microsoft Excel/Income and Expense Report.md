@@ -27,13 +27,14 @@
 - **Interactive Features:** Slicer for filtering by payee (e.g., 'MCK Engineering', 'RC Commissioner of Finance', 'US Tax Service').
 
 ## Screenshots
-
-![Checking Account](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Checking%20Account.png)  
-
-  
-![Individual Accounts](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Individual%20Accounts.png)
-
-
+**Checking Account:**  
+    ![Checking Account](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Checking%20Account.png)   
     
-![Check Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Check%20Register.png)
+
+**Individual Accounts:**  
+    ![Individual Accounts](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Individual%20Accounts.png)   
+    
+
+**Check Register**   
+    ![Check Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Check%20Register.png)
 
