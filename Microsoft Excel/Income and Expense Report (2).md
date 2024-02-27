@@ -19,15 +19,13 @@
 #### Online Transactions
 
 - **Description:** Details of online transactions.
-- **Columns:** Date, Description, Amount.
 - **Tables:**
   - Monthly breakdown with subtotals.
   - Annual summary with monthly subtotals.
 
 #### RDC (Remote Deposit Capture)
 
-- **Description:** Details of transactions categorized as "RDC."
-- **Columns:** Date, Description, Amount.
+- **Description:** Details of transactions categorized as RDC.
 - **Tables:**
   - Monthly breakdown with subtotals.
   - Annual summary with monthly subtotals.
@@ -35,7 +33,6 @@
 #### Check Register
 
 - **Description:** Details of checks presented.
-- **Columns:** Date, Description, Amount.
 - **Tables:**
   - Monthly breakdown with subtotals.
   - Annual summary with monthly subtotals.
@@ -43,7 +40,6 @@
 #### Transfer to Loan Account
 
 - **Description:** Details of transactions involving the transfer to the loan account.
-- **Columns:** Date, Description, Amount.
 - **Tables:**
   - Monthly breakdown with subtotals.
   - Annual summary with monthly subtotals.
