@@ -9,22 +9,21 @@ I developed a monthly cash flow manager for a church using Excel. This system au
 - Users enter the date, type, particulars, and amount in the 'Register' sheet.
 - The 'Summary' sheet automatically updates with categorized transactions for each month.
 
-## Code Snippets
+## Formulas Used
 
-```excel
-# Populate the transaction type and particulars
-=SORT(UNIQUE(FILTER('Register'!$D:$E, ('Register'!$D:$D<>""  ) + ('Register'!$E:$E<>""))))
+#### Populate the transaction type and particulars:  
+    = SORT(UNIQUE(FILTER('Register'!$D:$E, ('Register'!$D:$D<>""  ) + ('Register'!$E:$E<>""))))
 
-# Obtain corresponding summary
-=SUMIFS('Register'!$F:$F,'Register'!$D:$D,Summary!$B5,'Register'!$E:$E,Summary!$C5,'Register'!$G:$G,Summary!D$2)
-```
+#### Obtain corresponding summary:  
+    = SUMIFS('Register'!$F:$F,'Register'!$D:$D,Summary!$B5,'Register'!$E:$E,Summary!$C5,'Register'!$G:$G,Summary!D$2)
+
 ## Conclusion
 This cash register system has streamlined transaction tracking for the church, providing an efficient and user-friendly solution.
 
 --- 
 </br>
 
-#### *Screenshots:*
+#### Screenshots:
 ![Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Register.png)
 
 ---
