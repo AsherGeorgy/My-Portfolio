@@ -16,8 +16,8 @@
 
 ### Individual Totals
 
-- **Description:** Sheet to provide individual totals based on unique entries in the Description column from the Checking Account sheet.
-- **Data Validation:** Dropdown list of unique entries.
+- **Description:** Sheet to provide individual totals based on unique entries in the Description column from the Checking Account sheet. It also includes a table that shows the Individual Totals summary. 
+- **Data Validation:** Dropdown list of unique entries. Conditional Formatting added to highlight in the Individual Totals table the selected entry. 
 - **Formula Used:** `=FILTER(Table_CheckAcct,Table_CheckAcct[Individual Index]=$D$2)`.
 
 ### Check Register
