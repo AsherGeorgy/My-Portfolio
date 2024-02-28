@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a three-statement financial model with made with Excel. The model ([download](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/3S%20Model%20&%20Scenario%20Analysis.xlsx)) includes the following components:
+This is a three-statement financial model made with Excel. The model ([download](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/3S%20Model%20&%20Scenario%20Analysis.xlsx)) includes the following components:
 
 1. **Workings:**
    - Cleaned and processed data ready for analysis. 
