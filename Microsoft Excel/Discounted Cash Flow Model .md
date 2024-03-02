@@ -1,6 +1,6 @@
 # Discounted Cash Flow Model
 
-This Excel based financial model [(Download)](link/to/your/excel/file.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis of a startup firm. 
+This Excel based financial model [(download)](link/to/your/excel/file.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis of a startup firm. 
 
 ## Project Overview
 
