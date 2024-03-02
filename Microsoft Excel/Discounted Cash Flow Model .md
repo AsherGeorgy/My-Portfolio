@@ -1,25 +1,26 @@
 # Discounted Cash Flow Model
 
-This Excel based financial model [(Download)](link/to/your/excel/file.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis. 
+This Excel based financial model [(Download)](link/to/your/excel/file.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis of a startup firm. 
 
 ## Project Overview
 
 ### Features
 
 1. **Dynamic Three-Statement Model:**
-   - One-year forecasts for each of three main financial statements - Income statement, Cash Flow Statement and Balance Sheet.
+   - Forecasts one year for each of the three main financial statements: Income statement, Cash Flow Statement, and Balance Sheet.
 
 2. **Scenario Analysis:**
-   - Assumptions column on each sheet used for adjusting the model for different scenarios.
+   - Utilizes an assumptions column on each sheet for adjusting the model for different scenarios.
 
 3. **DCF Valuation:**
-   - Five-year (2024 - 2028) Cash Flow projections.
+   - Five-year Cash Flow projections.
    - Terminal value calculation.
-   - Application of WACC to cash flows to obtain the total present value of the business.
+   - Application of WACC to obtain the total present value of the business.
 
 4. **Summary Dashboard:**
-   - Display of key values, including Total Revenue, Gross Profit Margin %, and Net Income Margin % for the years 2022 to 2028.
-   - Dynamic charts for key values.
+   - Display of key forecasted values, including Total Revenue, Gross Profit Margin %, and Net Income Margin % for the years 2022 to 2028.
+   - Dynamic charts.
+   - WACC Calculation.
    - DCF sensitivity analysis Data Table showing changes in Total Present Value with different WACC and Long Term Growth Rate combinations.
 
 ### Documentation
