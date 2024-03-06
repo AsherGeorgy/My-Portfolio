@@ -1,19 +1,16 @@
 # Portfolio Returns and CAGR Analysis with yfinance
 
 ## Table of Contents
-### Table of Contents
-### Table of Contents
 1. [Introduction](#introduction)
 2. [Individual Stock Analysis](#individual-stock-analysis)
-   - [Simple Rate of Return](#simple-rate-of-return)
-   - [Log Return](#log-return)
-   - [Cumulative Return and CAGR](#cumulative-return-and-cagr)
-3. [Portfolio Analysis](#portfolio)
+   - [Simple Rate of Return](#1-simple-rate-of-return)
+   - [Log Return](#2-log-return)
+   - [Cumulative Return and CAGR](#3-cumulative-return-and-cagr)
+3. [Portfolio Analysis](#-portfolio)
    - [Comparing Relative Price Movements](#comparing-relative-price-movements)
    - [Weighted Average Rate of Return](#calculating-weighted-average-rate-of-return)
-   - [Cumulative Return and CAGR](#cumulative-return-and-cagr)
-4. [Additional Notes](#additional-notes)
-   
+   - [Cumulative Return and CAGR](#calculating-cumulative-return-and-cagr)
+4. [Additional Notes](#some-additional-notes)
 
 ## Introduction
 
