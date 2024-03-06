@@ -10,7 +10,7 @@
    - [Comparing Relative Price Movements](#comparing-relative-price-movements)
    - [Weighted Average Rate of Return](#calculating-weighted-average-rate-of-return)
    - [Cumulative Return and CAGR](#calculating-cumulative-return-and-cagr)
-4. [Summary](#-summary)
+4. [Summary](#summary) 
 4. [Additional Notes](#some-additional-notes)
 
 ## Introduction
