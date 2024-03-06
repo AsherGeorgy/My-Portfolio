@@ -2,6 +2,7 @@
 
 ## Table of Contents
 ### Table of Contents
+### Table of Contents
 1. [Introduction](#introduction)
 2. [Individual Stock Analysis](#individual-stock-analysis)
    - [Simple Rate of Return](#simple-rate-of-return)
@@ -11,10 +12,8 @@
    - [Comparing Relative Price Movements](#comparing-relative-price-movements)
    - [Weighted Average Rate of Return](#calculating-weighted-average-rate-of-return)
    - [Cumulative Return and CAGR](#cumulative-return-and-cagr)
-4. [Additional Notes](#some-additional-notes)
-   - [Normalisation to 100](#normalisation-to-100)
-   - [Alternative to using .shift()](#alternative-to-using-shift)
-
+4. [Additional Notes](#additional-notes)
+   
 
 ## Introduction
 
@@ -33,7 +32,7 @@ import yfinance as yf
 import datetime
 ```
 
-## Individual Stock Analysis 
+## Individual Stock Analysis
 
 ```python
 startDate = datetime.datetime(2023,3,2)
@@ -53,7 +52,7 @@ MSFT_data.head()
 
 In general, it is preferable to use **simple returns** when calculating the returns of multiple securities in the same period. **Log returns** are a better choice when calculating the return of a single security over multiple time periods.
 
-### 1. Simple Rate of Return 
+### 1. Simple Rate of Return
 
 Simple Return is given by the formula: $$\( \frac{P_1 - P_0}{P_0} = \frac{P_1}{P_0} - 1 \)$$
 
@@ -139,7 +138,7 @@ annualized_simple_return('MSFT', 2, 3, 2023, 2, 3, 2024)
 
 ```
 
-### 2. Log Return 
+### 2. Log Return
 
 Log return is given by the formula $$\( \ln \frac{P_t}{P_{t-1}} \)$$
 However, since percentage changes can be close to zero or negative, the adjusted closing prices are added by 1 in order to avoid errors. 
