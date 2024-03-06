@@ -10,6 +10,7 @@
    - [Comparing Relative Price Movements](#comparing-relative-price-movements)
    - [Weighted Average Rate of Return](#calculating-weighted-average-rate-of-return)
    - [Cumulative Return and CAGR](#calculating-cumulative-return-and-cagr)
+4. [Summary](#-summary)
 4. [Additional Notes](#some-additional-notes)
 
 ## Introduction
@@ -58,7 +59,7 @@ The **.pct_change()** method calculates the fractional change between the curren
 ```python
 MSFT_data1 = MSFT_data.copy()
 
-# Adding the column 'Daily Simple Returns' to the original dataframe
+# Calculate daily simple returns
 MSFT_data1['Daily Simple Returns'] = MSFT_data1['Close'].pct_change()
 MSFT_data1 = MSFT_data1.dropna()
 
@@ -67,6 +68,7 @@ print (MSFT_data1['Daily Simple Returns'])
 
 
 ```python
+# Visualize daily simple returns
 MSFT_data1['Daily Simple Returns'].plot(figsize=(15,5))
 plt.title("Daily Simple Returns of MSFT")
 plt.show
@@ -76,6 +78,7 @@ By default, using **.plot()** on a pandas DataFrame or Series creates a 'line' p
 
 
 ```python
+# Calculate average daily and annualized simple returns
 avg_returns_daily = MSFT_data1['Daily Simple Returns'].mean()
 
 # Assuming 250 trading days in a year
@@ -144,7 +147,8 @@ However, since percentage changes can be close to zero or negative, the adjusted
 ```python
 MSFT_data2 =  MSFT_data.copy()
 
-#the log function is from the numpy package
+# the log function is from the numpy package
+# Calculate daily log returns
 MSFT_data2['Daily log returns'] = np.log(1 + MSFT_data2['Close'].pct_change())
 MSFT_data2 = MSFT_data2.dropna()
 
@@ -153,6 +157,7 @@ print (MSFT_data2['Daily log returns'])
 
 
 ```python
+# Visualize daily log returns
 MSFT_data2['Daily log returns'].plot(figsize=(15,5))
 plt.title("Daily Log Returns of MSFT")
 plt.show
@@ -411,6 +416,18 @@ end_date = datetime.datetime(2023, 12, 31)
 portfolio_return_cagr(tickers_list, weights, start_date, end_date)
 
 ```
+
+## Summary
+
+In this notebook, I've demonstrated the integration of financial analysis principles with Python programming. Leveraging the yfinance library, I successfully retrieved and analyzed historical stock data for individual assets, calculated key financial metrics, and visualized the results. 
+
+Key Achievements and Skills Demonstrated:
+- Implemented daily simple returns and log returns calculations for individual stocks, showcasing proficiency in financial analysis using Python.
+- Developed functions for annualized returns and cumulative growth rate (CAGR), providing a comprehensive view of stock performance.
+- Constructed a portfolio analysis section, calculating weighted returns and cumulative returns for a portfolio of diverse assets.
+- Utilized visualizations to compare relative price movements and communicate insights effectively.
+.
+
 
 .
 
