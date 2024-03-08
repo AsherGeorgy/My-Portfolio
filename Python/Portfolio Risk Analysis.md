@@ -153,61 +153,6 @@ start_date = datetime.datetime(2014, 1, 1)
 calculate_risk_return(tickers, start_date, print_results=True)
 ```
 
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-
-    AAPL - Annualized Average Return: 22.34% | Volatility: 28.15%
-    GOOG - Annualized Average Return: 15.54% | Volatility: 27.79%
-    
-
-    
-    
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Ticker</th>
-      <th>Average Return</th>
-      <th>Volatility</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>AAPL</th>
-      <td>AAPL</td>
-      <td>0.223416</td>
-      <td>0.281538</td>
-    </tr>
-    <tr>
-      <th>GOOG</th>
-      <td>GOOG</td>
-      <td>0.155395</td>
-      <td>0.277900</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 ### 2. Covariance and Correlation
 
 There might exist a relationship between stock prices of different companies. Investigating what causes this relationship can help build optimal investment portfolios.  
@@ -275,43 +220,6 @@ start_date = datetime.datetime(2014, 1, 1)
 calculate_cov(tickers, start_date, print_results=True)
 ```
 
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-
-    The variance in returns of TSLA over the given period is 30.52%
-    The variance in returns of TM over the given period is 4.55%
-    
-    Here are their covariance and correlation matrices:
-    
-    Covariance Matrix:
-              TSLA        TM
-    TSLA  0.305168  0.030213
-    TM    0.030213  0.045485
-    
-    Correlation Matrix:
-             TSLA       TM
-    TSLA  1.00000  0.25644
-    TM    0.25644  1.00000
-    
-
-    
-    
-
-
-
-
-    (TSLA    0.305168
-     TM      0.045485
-     dtype: float64,
-               TSLA        TM
-     TSLA  0.305168  0.030213
-     TM    0.030213  0.045485,
-              TSLA       TM
-     TSLA  1.00000  0.25644
-     TM    0.25644  1.00000)
-
-
-
 ## <u> Portfolio Analysis
 
 Portfolio variance is calculated by the following formula:
@@ -342,30 +250,6 @@ pfolio_vol = pfolio_var ** 0.5
 
 print(f'Variance of the portflio in the given period is {pfolio_var*100:.3}% \nVolatility of the portfolio is {pfolio_vol*100:.3}%')
 ```
-
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-
-    The variance in returns of PFE over the given period is 5.42%
-    The variance in returns of JNJ over the given period is 3.06%
-    
-    Here are their covariance and correlation matrices:
-    
-    Covariance Matrix:
-              PFE       JNJ
-    PFE  0.054187  0.023434
-    JNJ  0.023434  0.030599
-    
-    Correlation Matrix:
-              PFE       JNJ
-    PFE  1.000000  0.575509
-    JNJ  0.575509  1.000000
-    Variance of the portflio in the given period is 3.29% 
-    Volatility of the portfolio is 18.1%
-    
-
-    
-    
 
 ### <u> Portfolio risk decomposition:
 
@@ -443,27 +327,6 @@ start_date = datetime.datetime(2007,1,1)
 end_date = datetime.datetime(2019,2,6)
 calculate_portfolio_risk(tickers, weights, start_date, end_date, print_results=True)
 ```
-
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-
-    Total portfolio variance: 5.25% 
-    Diversifiable variance: 2.92% 
-    Non-diversifiable variance: 2.33%
-    
-
-    
-    
-
-
-
-
-    (0.052537087892685526, 0.0292373566804945, 0.023299731212191026)
-
-
 
 # <br><br><br><br><br><br><br><u> **Additional Notes**
 
@@ -726,12 +589,6 @@ print(df)
 
 ```
 
-       Column1 Column2
-    0        1       A
-    1        2       B
-    2        3       C
-    
-
 - You can also create an empty DataFrame and then append rows or columns to it as needed. The following example demonstrates this:
 
 
@@ -750,25 +607,12 @@ print(df)
 
 ```
 
-       Column1 Column2
-    0        1       A
-    1        2       B
-    2        3       C
-    
-
 ### (c) Ignoring function results
 
 
 ```python
 var_annualized, _, _ = calculate_cov(tickers, start_date)
 ```
-
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    
 
 var_annualized is a variable, and the underscores (_) are used as placeholder variables to indicate that you're intentionally discarding the other elements of the tuple returned by calculate_cov.
 
@@ -819,10 +663,6 @@ print(result)
 
 ```
 
-    The output is:
-    5.0
-    
-
 ### (d) raise statement
 
 - Raises an exception, interrupting the normal flow of the program.
@@ -838,37 +678,6 @@ except ZeroDivisionError as e:
     raise RuntimeError("Custom error message") from e
 
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    ZeroDivisionError                         Traceback (most recent call last)
-
-    Cell In[15], line 3
-          1 try:
-          2     # Some code that may raise an exception
-    ----> 3     result = 1 / 0
-          4 except ZeroDivisionError as e:
-          5     # Handle the specific exception (division by zero)
-    
-
-    ZeroDivisionError: division by zero
-
-    
-    The above exception was the direct cause of the following exception:
-    
-
-    RuntimeError                              Traceback (most recent call last)
-
-    Cell In[15], line 6
-          3     result = 1 / 0
-          4 except ZeroDivisionError as e:
-          5     # Handle the specific exception (division by zero)
-    ----> 6     raise RuntimeError("Custom error message") from e
-    
-
-    RuntimeError: Custom error message
-
 
 ### (e) runtime error
 
