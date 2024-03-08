@@ -19,10 +19,9 @@ Variability is the best measure of risk. A volatile stock is much more likely to
 ### 1. Comparing Risk & Return of stocks:
 
 Three functions need to be defined for this purpose:
-- $ \text{'download_stock_data'}$ to download adjusted closing prices.
-- $ \text{'calculate_returns'}$ to calculate log returns. 
-- $ \text{'calculate_risk_return'}$ to calculate the stocks' volatility (risk) and return.
-
+- `download_stock_data` to download adjusted closing prices.
+- `calculate_returns` to calculate log returns.
+- `calculate_risk_return` to calculate the stocks' volatility (risk) and return.
 
 ```python
 def download_stock_data(tickers, start_date, end_date=None, plot_data=False):
@@ -163,7 +162,7 @@ There might exist a relationship between stock prices of different companies. In
   
 > Note that correlation between returns of two stocks may not be an indicator of correlaton between their prices. 
 
-$ \text {'calculate_cov'}$ is defined to calculate each of these metrics: 
+The function `calculate_cov` is defined to calculate each of these metrics: 
 
 
 ```python
@@ -223,10 +222,9 @@ calculate_cov(tickers, start_date, print_results=True)
 ## <u> Portfolio Analysis
 
 Portfolio variance is calculated by the following formula:
-$$ \text{Portfolio Variance} = \mathbf{w}^T \cdot \left( \mathbf{C} \cdot \mathbf{w} \right) $$
+$$\mathbf{Portfolio Variance} = \mathbf{w}^T \cdot (\mathbf{C} \cdot \mathbf{w})$$
 
-> Where $\mathbf{w}$ represents the vector of portfolio weights and $\mathbf{C}$ is the covariance matrix of the asset returns.
-
+- Where $\mathbf{w}$ represents the vector of portfolio weights, and $\mathbf{C}$ is the covariance matrix of the asset returns.
 - $\mathbf{C} \cdot \mathbf{w}$ computes the product of the covariance matrix and the weights vector.
 - The result is then multiplied by the transpose of the weights vector: $\mathbf{w}^T$.
 - The final dot product yields the portfolio variance.
@@ -338,22 +336,22 @@ The standard deviation formula involves calculating the squared difference betwe
 
 1. Calculate the mean:  
 
-    Mean = $ \frac{2 + 4 + 4 + 4 + 5}{5} = 3.8 $
+    Mean = $\mathbf{2 + 4 + 4 + 4 + 5}{5} = 3.8$
 
 2. Calculate the squared differences from the mean:
-   > (2 - 3.8)^2  
-       (4 - 3.8)^2  
-           (4 - 3.8)^2  
-               (4 - 3.8)^2  
-                   (5 - 3.8)^2  
+   > $\mathbf{(2 - 3.8)^2}$  
+       $\mathbf{(4 - 3.8)^2}$  
+           $\mathbf{(4 - 3.8)^2}$  
+               $\mathbf{(4 - 3.8)^2}$  
+                   $\mathbf{(5 - 3.8)^2}$  
 3. Sum the squared differences:
-   \[ 2.4^2 + 0.16^2 + 0.16^2 + 0.16^2 + 1.2^2 = 8 \]
+   $\mathbf{2.4^2 + 0.16^2 + 0.16^2 + 0.16^2 + 1.2^2 = 8}$
 
 4. Divide by the number of values (5):
   Variance = $\frac{8}{5} = 1.6 $
 
 5. Take the square root:
-  Standard Deviation = $ \sqrt[]{1.6} $  = 1.264 
+  Standard Deviation = $\sqrt{1.6} = 1.264$
 
 
 - In a way, variance is the average of the sum of squared deviation of each value from mean. SD is its square root.
@@ -443,12 +441,15 @@ $$\rho_{x,y} = \frac{cov(x,y)}{\sigma_x \sigma_y}$$
 For a set of n random variables X1, X2, ..., Xn, the covariance matrix Σ is an n × n matrix with elements defined as follows:
 
 
-\begin{bmatrix}
+$$
+\begin{matrix}
 \text{Cov}(X_1, X_1) & \text{Cov}(X_1, X_2) & \ldots & \text{Cov}(X_1, X_n) \\
 \text{Cov}(X_2, X_1) & \text{Cov}(X_2, X_2) & \ldots & \text{Cov}(X_2, X_n) \\
 \vdots & \vdots & \ddots & \vdots \\
 \text{Cov}(X_n, X_1) & \text{Cov}(X_n, X_2) & \ldots & \text{Cov}(X_n, X_n)
-\end{bmatrix}
+\end{matrix}
+$$
+
 
 
 
@@ -464,9 +465,9 @@ $$\sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i \cdot w_j \cdot \text{Cov}(R_i,
 $$ \text{Cov}(R_i, R_j) = \rho_{ij} \cdot \sigma_i \cdot \sigma_j $$
 <blockquote>
 Where: <br>
-- $ \rho_{ij} $ is the correlation coefficient between assets $ i $ and $ j $. <br>
-- $ \sigma_i $ and $ \sigma_j $ are the standard deviations of the returns of assets $ i $ and $ j $.
-        </blockquote>
+- ρ_ij is the correlation coefficient between assets i and j. <br> 
+- σ_i and σ_j are the standard deviations of the returns of assets i and j.
+</blockquote>
     
 - The correlation coefficient $( \rho_p $) between two assets $ i $ and $ j $ in a portfolio is given by:
 
@@ -493,7 +494,7 @@ where: <br>
    - The primary measure of systematic risk is beta ($\beta$), which represents the sensitivity of an individual security's returns to the overall market returns.
     - The formula for systematic risk involves the beta of each security and the variance of the market returns:
 
-   $$ \text{Systematic Risk} = \sum_{i=1}^{n} w_i \cdot \beta \cdot\text{Var}(M) $$
+   $$\mathbf{\text{Systematic Risk} = \sum_{i=1}^{n} w_i \cdot \beta \cdot\text{Var}(M) }$$
 <blockquote>
    Where: <br>
    - $ w_i $ is the weight of security $i$ in the portfolio. <br>
@@ -507,7 +508,7 @@ where: <br>
    - Diversification helps to reduce the impact of individual variances on the overall portfolio.
    - The formula for unsystematic risk involves the weights of individual securities and the variance of their returns:
 
-   $$ \text{Unsystematic Risk} = \sum_{i=1}^{n} w_i^2 \cdot \text{Var}(R_i) $$
+   $$\mathbf{\text{Unsystematic Risk} = \sum_{i=1}^{n} w_i^2 \cdot \text{Var}(R_i) }$$
 
     <blockquote>
    Where: <br>
