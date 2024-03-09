@@ -1,6 +1,7 @@
 ## Overview 
-[Link to the file](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Abraham%20Properties%202023.xlsx)
-
+This is the Income and Expense report of a real estate firm in NY. Raw bank statements of the firm were imported, processed and summarized into a user-friendly, interactive Excel file. [Link to the file](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Abraham%20Properties%202023.xlsx)
+<br>
+#### Following are the list of sheets included within the file along with a short description:
 ### Data Processing
 
 - **Description:** Initial data import and transformation using Excel's Power Query Editor.
