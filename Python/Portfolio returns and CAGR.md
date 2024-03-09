@@ -3,24 +3,22 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Individual Stock Analysis](#individual-stock-analysis)
-   - [Simple Rate of Return](#1-simple-rate-of-return)
-   - [Log Return](#2-log-return)
-   - [Cumulative Return and CAGR](#3-cumulative-return-and-cagr)
-3. [Portfolio Analysis](#-portfolio)
+   - [Data Retrieval](#data-retrieval)
+   - [Simple Rate of Return](#simple-rate-of-return)
+   - [Log Return](#log-return)
+   - [Cumulative Return and CAGR](#cumulative-return-and-cagr)
+4. [Portfolio Analysis](#-portfolio)
    - [Comparing Relative Price Movements](#comparing-relative-price-movements)
    - [Weighted Average Rate of Return](#calculating-weighted-average-rate-of-return)
    - [Cumulative Return and CAGR](#calculating-cumulative-return-and-cagr)
-4. [Summary](#summary) 
+5. [Summary](#summary) 
 4. [Additional Notes](#some-additional-notes)
 
 ## Introduction
 
-This project, originally created on Jupyter Notebook, delves into the comprehensive evaluation of a stock portfolio comprising Microsoft, Apple, Google, and Meta. 
+This project delves into the comprehensive evaluation of a stock portfolio comprising Microsoft, Apple, Google, and Meta. 
   
   Leveraging the **yfinance** library in Python, the analysis extracts financial data from Yahoo Finance, aiming to showcase the calculation of essential metrics — **simple and log returns, cumulative returns, and Compound Annual Growth Rate (CAGR)** — with a focus on individual stocks as well as the portfolio as a whole.
-
-The yfinance library provides a straightforward approach to downloading financial data, presented as a Pandas DataFrame.
-
 
 ```python
 import numpy as np
@@ -32,6 +30,8 @@ import datetime
 
 ## Individual Stock Analysis
 
+### Data Retrieval 
+The yfinance library provides a straightforward approach to downloading financial data, presented as a Pandas DataFrame.
 ```python
 startDate = datetime.datetime(2023,3,2)
 endDate = datetime.datetime(2024,3,2)
@@ -48,9 +48,8 @@ MSFT_data = MSFT.history(start=startDate, end=endDate)
 MSFT_data.head()
 ```
 
+### Simple Rate of Return
 In general, it is preferable to use **simple returns** when calculating the returns of multiple securities in the same period. **Log returns** are a better choice when calculating the return of a single security over multiple time periods.
-
-### 1. Simple Rate of Return
 
 Simple Return is given by the formula: $$\( \frac{P_1 - P_0}{P_0} = \frac{P_1}{P_0} - 1 \)$$
 
@@ -138,7 +137,7 @@ annualized_simple_return('MSFT', 2, 3, 2023, 2, 3, 2024)
 
 ```
 
-### 2. Log Return
+### Log Return
 
 Log return is given by the formula $$\( \ln \frac{P_t}{P_{t-1}} \)$$
 However, since percentage changes can be close to zero or negative, the adjusted closing prices are added by 1 in order to avoid errors. 
@@ -222,7 +221,7 @@ def annualized_log_returns(ticker, StartDay, StartMonth, StartYear, EndDay, EndM
 annualized_log_returns('MSFT', 2, 3, 2023, 2, 3, 2024, trading_days_in_year=252)
 ```
 
-### 3. Cumulative Return and CAGR
+### Cumulative Return and CAGR
 
 The <u> **cumulative return** </u> is the total percentage change in the price from the start date to the end date. It is a measure of the overall investment performance over a specific period. The **cumprod()** function is used for this purpose. 
    - The pct_change() method computes the percentage change between the each day's adjusting closing prices. In order to calculate cumulative return, 1 is added to each of these percentages, converting them into multipliers.
@@ -419,24 +418,15 @@ portfolio_return_cagr(tickers_list, weights, start_date, end_date)
 
 ## Summary
 
-In this notebook, I've demonstrated the integration of financial analysis principles with Python programming. Leveraging the yfinance library, I successfully retrieved and analyzed historical stock data for individual assets, calculated key financial metrics, and visualized the results. 
+This project demonstrates the integration of financial analysis principles with Python programming. Leveraging the yfinance library, it successfully retrieves and analyzes historical stock data for individual assets, calculates key financial metrics, and visualizes the results. 
 
 Key Achievements and Skills Demonstrated:
-- Implemented daily simple returns and log returns calculations for individual stocks, showcasing proficiency in financial analysis using Python.
+- Implemented daily simple returns and log returns calculations for individual stocks.
 - Developed functions for annualized returns and cumulative growth rate (CAGR), providing a comprehensive view of stock performance.
 - Constructed a portfolio analysis section, calculating weighted returns and cumulative returns for a portfolio of diverse assets.
-- Utilized visualizations to compare relative price movements and communicate insights effectively.
-.
-
-
-.
-
-.
-
-.
-
-.
-
+- Utilized visualizations to compare relative price movements.
+# ____________________________________________________________________________
+<br><br><br><br><br><br><br>
 # Some additional notes
 
 ### 1. Normalisation to 100
