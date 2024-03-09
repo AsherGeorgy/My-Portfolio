@@ -352,7 +352,7 @@ Key Achievements and Skills Demonstrated: <br>
 
 ## 1. Statistics
 
-### **(a) Variance and Standard Deviation:** 
+### **Variance and Standard Deviation:** 
 
 The standard deviation formula involves calculating the squared difference between each value and the mean, summing those squared differences, dividing by the number of values, and then taking the square root:
 
@@ -418,7 +418,7 @@ While variance provides a measure of how much individual values in a dataset dev
   - Standard deviation is often used in statistical analyses and reporting, making it a more consistent measure across various contexts.
   - Many statistical methods and models assume normality and use standard deviation as a key parameter.
 
-###  **(b) Variance, Covariance and Correlation:**
+###  **Variance, Covariance and Correlation:**
 
 **Variance** <br>
 - Variance is a statistical measure that quantifies the dispersion or spread of a set of values in a dataset. 
@@ -454,7 +454,7 @@ $$\rho_{x,y} = \frac{cov(x,y)}{\sigma_x \sigma_y}$$
   - Covariance can range from negative infinity to positive infinity.
   - Correlation is restricted to the range [-1, 1].
 
-#### **Covariance Matrix:**
+##### **Covariance Matrix:**
 
 - A covariance matrix is a square matrix that summarizes the covariances between multiple variables. 
 - In statistics, it is used to describe the joint variability of two or more random variables. 
@@ -476,7 +476,7 @@ $$
 
 
 
-### **(c) For a portfolio:**
+### **Portfolio Risk:**
 
 - The variance $\sigma^2$ of a portfolio comprising $ n $ assets with respective weights $w_i$ , variances $\sigma_i^2$, and covariances $\text{Cov}(R_i, R_j)$ is given by:
 
@@ -500,7 +500,7 @@ These formulas are crucial for understanding the risk and return characteristics
 
 ## 2. Finance
 
-#### <u>**Portfolio Risk Decomposition:**
+### <u>**Portfolio Risk Decomposition:**
 
 Involves separating the total risk into the non-diversifiable systematic risk and the diversifiable unsystematic risk. It is given by:
 > **Total Portfolio Variance** = Systematic Risk + Unsystematic Risk <br>
@@ -540,12 +540,12 @@ where: <br>
    - $\text{Var}(R_i)$ is the variance of the returns of security $i$.
                                                                                           </blockquote>
     
-#### **Total Portfolio Risk:**
+### **Total Portfolio Risk:**
 $$ \text{Total Portfolio Risk} = \text{Systematic Risk} + \text{Unsystematic Risk} $$
 
 This decomposition helps investors and portfolio managers understand the sources of risk in a portfolio and the potential benefits of diversification in reducing overall risk.
 
-#### <u>Some additional notes about unsystematic risk:
+### <u>Notes on unsystematic risk:
 It can be described as the sum of two components: 
 1. the variances of the individual securities within the portfolio and 
 2. the covariances between the securities. 
@@ -563,7 +563,7 @@ On the other hand, regardless of the number of securities contained in a portfol
 
 ## 3. Python
 
-### (a) NumPy np.dot() function
+### NumPy np.dot() function
 
 The np.dot function in NumPy is a versatile tool for matrix multiplication and array operations. Its behavior depends on the type and dimensions of the input arrays. 
 1. <u> 1-D Arrays (Vectors): 
@@ -590,7 +590,7 @@ The np.dot function in NumPy is a versatile tool for matrix multiplication and a
     If both arguments are scalars, the dot product is equivalent to multiplication. 
     Example: np.dot(2, 3) results in 2 ⋅ 3  
 
-### (b) Pandas DataFrame
+### Pandas DataFrame
 
 The syntax for creating a DataFrame in pandas involves using the pd.DataFrame() constructor. You can pass a dictionary, list of dictionaries, or other iterable objects to specify the data and columns.
 
@@ -632,7 +632,7 @@ print(df)
 
 ```
 
-### (c) Ignoring function results
+### Ignoring function results
 
 
 ```python
@@ -646,7 +646,7 @@ var_annualized: This variable stores the value of the variance in returns, which
 _: The underscores are conventionally used as placeholders to indicate that the corresponding values (covariance matrix and correlation matrix in this case) are being ignored and not assigned to variables.
 So, var_annualized is a new variable that holds the value you're interested in, and the underscores are used to "throw away" the other values returned by the function.
 
-### (d) Error handling
+### Error handling
 
 Error handling in Python involves using try, except, and optionally finally blocks to manage exceptions that might occur during the execution of a program:
 
@@ -688,7 +688,7 @@ print(result)
 
 ```
 
-### (d) raise statement
+### raise statement
 
 - Raises an exception, interrupting the normal flow of the program.
 - Provides a structured way to handle errors, allowing to specify the type of exception and include a custom error message.
@@ -704,7 +704,7 @@ except ZeroDivisionError as e:
 
 ```
 
-### (e) runtime error
+### runtime error
 
 A runtime error, also known as an exception, occurs during the execution of a program. These errors can happen for various reasons, such as invalid input, division by zero, or attempting to access a variable or element that doesn't exist. Runtime errors are typically detected while the program is running.
 
