@@ -18,7 +18,7 @@ This Excel based system automates the tracking of transactions, categorizes them
     = SUMIFS('Register'!$F:$F,'Register'!$D:$D,Summary!$B5,'Register'!$E:$E,Summary!$C5,'Register'!$G:$G,Summary!D$2)
 
 ## Conclusion
-This cash register system has streamlined transaction tracking for the church, providing an efficient and user-friendly solution.
+This cash register system has streamlined transaction tracking, providing an efficient and user-friendly solution.
 
 --- 
 </br>
