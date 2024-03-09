@@ -495,12 +495,14 @@ where: <br>
     - The formula for systematic risk involves the beta of each security and the variance of the market returns:
 
    $$\mathbf{\text{Systematic Risk} = \sum_{i=1}^{n} w_i \cdot \beta \cdot\text{Var}(M) }$$
-<blockquote>
+
+
+    <blockquote>
    Where: <br>
-   - $ w_i $ is the weight of security $i$ in the portfolio. <br>
-   - $\text{Var}(R_i)$ is the variance of the market returns. <br>
-   - $ \beta_i $ is the beta of security $i$.
-</blockquote>
+   - $w_i$ is the weight of security $i$ in the portfolio. <br>
+   - $\text{Var}(R_i)$ is the variance of the returns of security $i$. <br> 
+   - $\beta_i$ is the beta of security $i$.
+                                                                                          </blockquote>
 
 2. **Unsystematic Risk (Diversifiable/Company specific/idiosyncratic risk):**
    - Unsystematic risk is related to specific characteristics of individual securities and can be diversified away by holding a well-diversified portfolio.    
@@ -512,7 +514,7 @@ where: <br>
 
     <blockquote>
    Where: <br>
-   - $ w_i $ is the weight of security $i$ in the portfolio. <br>
+   - $w_i$ is the weight of security $i$ in the portfolio. <br>
    - $\text{Var}(R_i)$ is the variance of the returns of security $i$.
                                                                                           </blockquote>
     
