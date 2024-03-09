@@ -348,6 +348,7 @@ Key Achievements and Skills Demonstrated: <br>
 - Explored covariance and correlation, providing essential insights into the relationship between different assets.
 - Introduced a portfolio risk decomposition function, helping users understand the sources of risk in their investment portfolios.
 
+# <hr>
 # <br><br><br><br><br><br><br><u> **Additional Notes**
 
 ## 1. Statistics
