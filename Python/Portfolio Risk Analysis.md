@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Analysis of Individual Stocks](#-individual-stock-analysis)
+2. [Individual Stock Analysis](#-individual-stock-analysis)
    - [Risk & Return](#1-risk--return)
    - [Covariance and Correlation](#2-covariance-and-correlation)
 3. [Portfolio Analysis](#-portfolio-analysis)
