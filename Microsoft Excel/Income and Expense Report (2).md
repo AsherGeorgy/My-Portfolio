@@ -1,5 +1,8 @@
 ## Overview 
-[Link to the file](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Diwali%20Investment%20LLC%202023.xlsx)
+This is the Income and Expense report of a small investment firm in NJ. Raw bank statements of the firm were imported, processed and summarized into a user-friendly, interactive Excel file. [Link to the file](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Diwali%20Investment%20LLC%202023.xlsx)
+
+
+#### Following are the list of sheets included within the file along with a short description:
 
 ### Data Processing
 
@@ -44,7 +47,7 @@
   - Monthly breakdown with subtotals.
   - Annual summary with monthly subtotals.
 
-## Screenshots
+### Screenshots
 **Monthly Summary:**  
     ![Monthly Summary](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Monthly%20Summary.png)   
 
