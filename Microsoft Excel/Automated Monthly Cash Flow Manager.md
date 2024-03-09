@@ -2,7 +2,7 @@
 
 ## Overview
 
-I developed a monthly cash flow manager for a church using Excel. This system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month. Download it [here](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Expense.Register.xlsx)
+This Excel based system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month. Download it [here](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Expense.Register.xlsx)
 
 ## How It Works
 
