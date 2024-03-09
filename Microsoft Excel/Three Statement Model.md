@@ -12,7 +12,7 @@ This is a three-statement financial model made with Excel for a firm in the cons
    - Scenarios analysis based on changes in revenue growth, COGS and Opex (Base case, Best case, Worst case).
    - Documentation of steps and assumptions. 
 
-3. **Forecast BS:**
+3. **Forecast Balance Sheet:**
    - Trade Recievables, Inventory and Trade payables area modelled using 'Days' figures (DSO, DPO, DIO). 
    - Other assets and liabilities are forecasted as a percentage of revenue.
    - Documentation of steps and assumptions.
