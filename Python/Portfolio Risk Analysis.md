@@ -349,7 +349,8 @@ Key Achievements and Skills Demonstrated: <br>
 - Introduced a portfolio risk decomposition function, helping users understand the sources of risk in their investment portfolios.
 
 # ____________________________________________________________________________
-# <br><br><br><br><br><br><br><u> **Additional Notes**
+<br><br><br><br><br><br><br>
+# <u> **Additional Notes**
 
 ## 1. Statistics
 
