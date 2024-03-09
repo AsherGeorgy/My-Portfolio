@@ -3,8 +3,8 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Individual Stock Analysis](#-individual-stock-analysis)
-   - [Risk & Return](#1-risk--return)
-   - [Covariance and Correlation](#2-covariance-and-correlation)
+   - [Risk & Return](#risk--return)
+   - [Covariance and Correlation](#covariance-and-correlation)
 3. [Portfolio Analysis](#-portfolio-analysis)
    - [Portfolio Variance](#-portfolio-variance)
    - [Portfolio Risk Decomposition](#-portfolio-risk-decomposition)
@@ -339,7 +339,7 @@ end_date = datetime.datetime(2019,2,6)
 calculate_portfolio_risk(tickers, weights, start_date, end_date, print_results=True)
 ```
 
-# Summary:
+# Summary
 This project successfully implements a set of Python functions for stock analysis, covering key aspects such as data retrieval, return calculation, risk metrics computation, covariance, correlation, and risk decomposition. The project demonstrates proficiency in Python programming as well as the ability to apply mathematical and financial concepts to real-world data.
 
 Key Achievements and Skills Demonstrated: <br>
@@ -348,7 +348,7 @@ Key Achievements and Skills Demonstrated: <br>
 - Explored covariance and correlation, providing essential insights into the relationship between different assets.
 - Introduced a portfolio risk decomposition function, helping users understand the sources of risk in their investment portfolios.
 
-# <hr>
+# ____________________________________________________________________________
 # <br><br><br><br><br><br><br><u> **Additional Notes**
 
 ## 1. Statistics
