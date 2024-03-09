@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 
 ## <u> Individual Stock Analysis
 
-### 1. Risk & Return:
+### Risk & Return:
 Variability is the best measure of risk. A volatile stock is much more likely to deviate from its historical returns and surprise investors negatively. <br> **Standard deviation** helps quantify risk associated with the dispersion (volatitlity). 
 
 Three functions are defined for this purpose:
@@ -164,7 +164,7 @@ start_date = datetime.datetime(2014, 1, 1)
 calculate_risk_return(tickers, start_date, print_results=True)
 ```
 
-### 2. Covariance and Correlation
+### Covariance and Correlation
 
 There might exist a relationship between stock prices of different companies. Covariance and Correlation quantifies the strength of such relationships. Investigating the reasons behind what causes them can help build optimal investment portfolios.  
 
@@ -394,7 +394,7 @@ $$ \text{variance s}^2 = \frac{\sum\limits_{i=1}^n (x_i - \bar{x})^2}{n-1}$$
 
       Squaring simplifies the mathematical operations involved in calculating the standard deviation. It eliminates the need to deal with negative values and provides a continuous, differentiable function, making it easier to work with mathematically.
       
-##### Standard deviation over Variance
+###### Standard deviation over Variance
 
 While variance provides a measure of how much individual values in a dataset deviate from the mean, to assess the risk associated with a stock, it is generally more intuitive to look at the **standard deviation** rather than the **variance**. Standard deviation is often preferred for several reasons:
 
