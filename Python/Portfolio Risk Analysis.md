@@ -1,3 +1,19 @@
+# Portfolio Risk Analysis
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Analysis of Individual Stocks](#-individual-stock-analysis)
+   - [Risk & Return](#1-risk--return)
+   - [Covariance and Correlation](#2-covariance-and-correlation)
+3. [Portfolio Analysis](#-portfolio-analysis)
+   - [Portfolio Variance](#-portfolio-variance)
+   - [Portfolio Risk Decomposition](#-portfolio-risk-decomposition)
+4. [Summary](#summary) 
+5. [Additional Notes](#-additional-notes)
+
+## Introduction
+This project explores the application of Python in analyzing individual stocks and portfolios, aiming to provide insights into risk and return metrics. From data collection to portfolio risk decomposition, it walks through the process of leveraging Python for comprehensive risk analysis.
+
 ```python
 import datetime
 import pandas as pd
@@ -6,22 +22,18 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 ```
 
-# **Risk Analysis**
-<hr>
 
-Variability is the best measure of risk. A volatile stock is much more likely to deviate from its historical returns and surprise investors negatively. <br>
-  
-**Standard deviation** helps quantify risk associated with the dispersion (volatitlity). 
 
 
 ## <u> Individual Stock Analysis
 
-### 1. Comparing Risk & Return of stocks:
+### 1. Risk & Return:
+Variability is the best measure of risk. A volatile stock is much more likely to deviate from its historical returns and surprise investors negatively. <br> **Standard deviation** helps quantify risk associated with the dispersion (volatitlity). 
 
-Three functions need to be defined for this purpose:
+Three functions are defined for this purpose:
 - `download_stock_data` to download adjusted closing prices.
-- `calculate_returns` to calculate log returns.
-- `calculate_risk_return` to calculate the stocks' volatility (risk) and return.
+- `calculate_returns` to calculate daily log returns.
+- `calculate_risk_return` to calculate the stocks' volatility and average annualized return.
 
 ```python
 def download_stock_data(tickers, start_date, end_date=None, plot_data=False):
@@ -154,7 +166,7 @@ calculate_risk_return(tickers, start_date, print_results=True)
 
 ### 2. Covariance and Correlation
 
-There might exist a relationship between stock prices of different companies. Investigating what causes this relationship can help build optimal investment portfolios.  
+There might exist a relationship between stock prices of different companies. Covariance and Correlation quantifies the strength of such relationships. Investigating the reasons behind what causes them can help build optimal investment portfolios.  
 
 - **Variance** is a statistical measure that quantifies the dispersion or spread of a set of values in a dataset.
 - **Covariance** measures the degree to which two random variables change together. 
@@ -221,6 +233,7 @@ calculate_cov(tickers, start_date, print_results=True)
 
 ## <u> Portfolio Analysis
 
+### <u> Portfolio Variance:
 Portfolio variance is calculated by the following formula:
 $$\mathbf{Portfolio Variance} = \mathbf{w}^T \cdot (\mathbf{C} \cdot \mathbf{w})$$
 
@@ -325,6 +338,15 @@ start_date = datetime.datetime(2007,1,1)
 end_date = datetime.datetime(2019,2,6)
 calculate_portfolio_risk(tickers, weights, start_date, end_date, print_results=True)
 ```
+
+# Summary:
+This project successfully implements a set of Python functions for stock analysis, covering key aspects such as data retrieval, return calculation, risk metrics computation, covariance, correlation, and risk decomposition. The project demonstrates proficiency in Python programming as well as the ability to apply mathematical and financial concepts to real-world data.
+
+Key Achievements and Skills Demonstrated: <br>
+- Developed robust functions for downloading stock data, calculating returns, and deriving various risk metrics.
+- Implemented portfolio analysis tools to assess the performance and risk of a set of stocks.
+- Explored covariance and correlation, providing essential insights into the relationship between different assets.
+- Introduced a portfolio risk decomposition function, helping users understand the sources of risk in their investment portfolios.
 
 # <br><br><br><br><br><br><br><u> **Additional Notes**
 
