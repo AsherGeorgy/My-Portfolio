@@ -47,6 +47,7 @@ MSFT_data = MSFT.history(start=startDate, end=endDate)
 ```python
 MSFT_data.head()
 ```
+![MSFT_data.head](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(238).png)
 
 ### Simple Rate of Return
 In general, it is preferable to use **simple returns** when calculating the returns of multiple securities in the same period. **Log returns** are a better choice when calculating the return of a single security over multiple time periods.
@@ -64,17 +65,7 @@ MSFT_data1 = MSFT_data1.dropna()
 
 print (MSFT_data1['Daily Simple Returns'])
 ```
-
-
-```python
-# Visualize daily simple returns
-MSFT_data1['Daily Simple Returns'].plot(figsize=(15,5))
-plt.title("Daily Simple Returns of MSFT")
-plt.show
-```
-
-By default, using **.plot()** on a pandas DataFrame or Series creates a 'line' plot. To obtain a different type of plot, specify it by using the 'kind' parameter. 
-
+![Simple Returns](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(23).png)
 
 ```python
 # Calculate average daily and annualized simple returns
@@ -82,14 +73,8 @@ avg_returns_daily = MSFT_data1['Daily Simple Returns'].mean()
 
 # Assuming 250 trading days in a year
 avg_returns_annualized = avg_returns_daily * 250
-avg_returns_annualized
 ```
-
-
-```python
-print(f'The average daily simple returns of MSFT in the given period is {round(avg_returns_daily,4)*100}%')
-print(f'The annualized average daily simple returns of MSFT in the given period is {round(avg_returns_annualized,5)*100}%')
-```
+By default, using **.plot()** on a pandas DataFrame or Series creates a 'line' plot. 
 
 #### Putting it all into a function:
 
@@ -136,6 +121,7 @@ def annualized_simple_return(ticker, StartDay, StartMonth, StartYear, EndDay, En
 annualized_simple_return('MSFT', 2, 3, 2023, 2, 3, 2024)
 
 ```
+![annualized_simple_return](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(239).png)
 
 ### Log Return
 
@@ -150,30 +136,13 @@ MSFT_data2 =  MSFT_data.copy()
 # Calculate daily log returns
 MSFT_data2['Daily log returns'] = np.log(1 + MSFT_data2['Close'].pct_change())
 MSFT_data2 = MSFT_data2.dropna()
-
-print (MSFT_data2['Daily log returns'])
 ```
-
-
-```python
-# Visualize daily log returns
-MSFT_data2['Daily log returns'].plot(figsize=(15,5))
-plt.title("Daily Log Returns of MSFT")
-plt.show
-```
-
 
 ```python
 average_returns_daily = MSFT_data2['Daily log returns'].mean()
 
 # Assuming 250 trading days in a year
 log_returns_annualized = average_returns_daily * 250
-log_returns_annualized
-```
-
-
-```python
-print (str(round(log_returns_annualized,5)*100) + '%')
 ```
 
 #### Putting it all into a function:
@@ -220,6 +189,7 @@ def annualized_log_returns(ticker, StartDay, StartMonth, StartYear, EndDay, EndM
 # Example usage with 252 trading days in a year
 annualized_log_returns('MSFT', 2, 3, 2023, 2, 3, 2024, trading_days_in_year=252)
 ```
+![annualized_log_returns](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(240).png)
 
 ### Cumulative Return and CAGR
 
@@ -282,6 +252,7 @@ def calculate_cumulative_return_and_cagr(ticker, startday, startmonth, startyear
 calculate_cumulative_return_and_cagr('MSFT', 2, 3, 2019, 2, 3, 2024)
 
 ```
+![calculate_cumulative_return_and_cagr](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(241).png)
 
 ## <u> Portfolio
 
@@ -301,17 +272,9 @@ stock_data = pd.DataFrame()
 for t in tickers_list:
     stock_data[t] = yf.download(t, startDate, endDate)['Close']
 
-# Normalisation to base 100 before plotting
-((stock_data/stock_data.iloc[1])*100).plot(figsize=(15,7))
-
-plt.legend()
-plt.title("Comparing Relative Stock Price movement", fontsize=16)
-plt.ylabel('$', fontsize=14)
-plt.xlabel('Years', fontsize=14)
-plt.grid(which="major", color='k', linestyle='-.', linewidth=0.5) 
-plt.xlim(left=stock_data.index[0])
-plt.show
+stock_data.head()
 ```
+![stock_data.head](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(245).png)
 
 ### Calculating weighted average rate of return:
 
@@ -329,7 +292,6 @@ average_daily_returns = daily_returns.mean()
 annualized_average = average_daily_returns*250
 
 portfolio_return = np.dot(annualized_average, weights)
-portfolio_return
 ```
 
 ### Calculating cumulative return and CAGR:
@@ -343,8 +305,6 @@ no_of_years = (endDate -  startDate).days/365.25
 
 cumulative_return = np.dot(cumproduct.iloc[-1], weights)
 CAGR_portfolio = cumulative_return**(1/no_of_years) - 1
-
-cumulative_return, CAGR_portfolio
 ```
 
 ### Putting it all into a function:
@@ -415,6 +375,7 @@ end_date = datetime.datetime(2023, 12, 31)
 portfolio_return_cagr(tickers_list, weights, start_date, end_date)
 
 ```
+![portfolio_return_cagr](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(242).png)
 
 ## Summary
 
