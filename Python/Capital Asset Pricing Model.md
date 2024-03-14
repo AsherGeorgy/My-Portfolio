@@ -9,7 +9,7 @@ import numpy as np
 import yfinance as yf
 ```
 
-## Expected return ($r_i$)
+### Expected return ($r_i$)
 When an investor buys a share of a stock, they expect to earn a return that compensates them for the risk they're taking. <br><br>This compensation (return) is made up of a baseline risk-free return ($r_f$) and an additional return based on the risk of the stock, which is proportional to the overall market risk (equity risk premium), adjusted by the stock's sensitivity to market movements ($\beta_{im}$). <br> 
 
 Thus the **expected return ($r_i$)** of a particular stock  is given by:
