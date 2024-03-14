@@ -1,12 +1,10 @@
-# <u>**Capital Asset Pricing Model**
-
-
+# **Capital Asset Pricing Model (CAPM)**
 
 When an investor buys a share of a stock, they expect to earn a return that compensates them for the risk they're taking. <br><br>This compensation (return) is made up of a baseline risk-free return ($r_f$) and an additional return based on the risk of the stock, which is proportional to the overall market risk (equity risk premium), adjusted by the stock's sensitivity to market movements ($\beta_{im}$). <br> 
 
 Thus the **expected return ($r_i$)** on a particular stock  is given by:
 
-#### $$r_i = r_f + \beta_{im}(r_m-r_f)$$ 
+$$r_i = r_f + \beta_{im}(r_m-r_f)$$ 
 
 where
 >$r_f$ is the return an investor would get from a completely safe, risk-free investment. <br>
@@ -18,11 +16,11 @@ where
 
 In reality, there is always some level of risk, but for the sake of this formula, it is assumed there is a risk-free asset with no risk.
 
-## <u>Beta</u> $\beta$ 
+## **Beta ($\beta$)**
 
 $\beta$ measures the sensitivity of a stock's returns to changes in the market.
 
-#### $$\beta_x = \frac{{Cov}_{x,m}}{Var_m} $$ 
+$$\beta_x = \frac{{Cov}_{x,m}}{Var_m} $$ 
 where 
 > $x$ represents the asset <br>
 > $m$ represents the market 
@@ -31,8 +29,8 @@ where
 - A beta less than 1 indicates the stock is less volatile than the market.
 - A beta greater than 1 indicates higher volatility.
 
-### Beta calculation with Python
-
+## Running a CAPM :
+### Cal
 
 ```python
 import pandas as pd
@@ -105,9 +103,9 @@ def calculate_beta(tickers, market_index='^GSPC'):
     return beta_df
 ```
 
-### Applying CAPM:
+## **Applying the CAPM formula:**
 
-A 10 year US government bond can be considered risk free. Currently its yield is 4.19% ([Bloomberg.com](*https://www.bloomberg.com/markets/rates-bonds/government-bonds/us)) <br>
+A 10 year US government bond can be considered risk free. Currently its yield is 4.19% [(Bloomberg.com)](*https://www.bloomberg.com/markets/rates-bonds/government-bonds/us) <br>
 
 
 ```python
@@ -143,24 +141,10 @@ def capm_expected_return(tickers, risk_free_rate, risk_premium, market_index='^G
 
 ```
 
-## <u>Alpha</u> ($\alpha$)
-
-Alpha is a key metric used to evaluate the performance of an investment. It represents the excess return generated beyond what would be expected based on the inherent risks associated with the market. The standard CAPM setting assumes efficient financial market and therefore an $\alpha$ of zero. It is included in the augmented CAPM expected return formula:
-
-#### $$r_i = \alpha + r_f + \beta_{im}(r_m-r_f)$$ 
-
-- Given that $\beta$ multiplied by the equity risk premium gives us the compensation for risk that's been taken with the investment, $\alpha$ shows us how much return we get without bearing extra risk. 
-- It provides insight into the baseline return, acting as a measure of intrinsic performance of an investement fund beyond market dynamics. Positive or negative values of $\alpha$ suggest either outperformance or underperformance relative to market expectations. 
-- A practical implication is that a fund manager charging fees equivalent to 1% of the invested amount would need an $\alpha$ exceeding 1% to rationalize the associated costs.
-
-Note that alpha is comparable only when the risk profile (beta) of the investments being compared is similar.
-
-
-
-## <u>Sharpe Ratio
+# **Sharpe Ratio**
 
 The Sharpe Ratio is a measure of risk-adjusted return, commonly used to evaluate the performance of an investment or a portfolio. 
-#### $$\frac{r_i-r_f}{\sigma_i}$$
+$$\frac{r_i-r_f}{\sigma_i}$$
 where 
 > $r_i$ is the average rate of return on the investment $i$.   <br>
 > $r_f$ is the risk free rate. <br>
@@ -207,5 +191,16 @@ def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='
     
     return sharpe_ratio
 ```
+# Additional Notes:
+## **Alpha</u> ($\alpha$)**
 
+Alpha is a key metric used to evaluate the performance of an investment. It represents the excess return generated beyond what would be expected based on the inherent risks associated with the market. The standard CAPM setting assumes efficient financial market and therefore an $\alpha$ of zero. It is included in the augmented CAPM expected return formula:
+
+$$r_i = \alpha + r_f + \beta_{im}(r_m-r_f)$$ 
+
+- Given that $\beta$ multiplied by the equity risk premium gives us the compensation for risk that's been taken with the investment, $\alpha$ shows us how much return we get without bearing extra risk. 
+- It provides insight into the baseline return, acting as a measure of intrinsic performance of an investement fund beyond market dynamics. Positive or negative values of $\alpha$ suggest either outperformance or underperformance relative to market expectations. 
+- A practical implication is that a fund manager charging fees equivalent to 1% of the invested amount would need an $\alpha$ exceeding 1% to rationalize the associated costs.
+
+Note that alpha is comparable only when the risk profile (beta) of the investments being compared is similar.
 
