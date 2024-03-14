@@ -9,7 +9,7 @@
    - [2.Calculate Beta](#2-calculate-beta-beta_im)
    - [3.Estimate expected returns](#3-estimate-expected-returns-r_i)
 3. [Sharpe Ratio](#sharpe-ratio)
-   - [Calculate with Python](#1-retrieve-stock-data-and-calculate-log-returns)
+   - [Calculate with Python](#calculate-with-python)
 5. [Summary](#summary) 
 6. [Additional Notes](#additional-notes)
 
@@ -88,7 +88,7 @@ def periodic_stock_returns(tickers, period, interval):
 tickers = ['WMT','KO','LMT','PFE']
 periodic_stock_returns(tickers, period="5y", interval="1mo")
 ```
-This example code returns the 5 year monthly adjusted closing prices and log returns of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc.
+This example code returns the monthly adjusted closing prices and log returns of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc from the past 5 years.
 
 ### 2. Calculate Beta ($\beta_{im}$):
 ```python
@@ -188,7 +188,7 @@ Investors and fund managers often use the Sharpe Ratio to compare the risk-adjus
 - Higher Sharpe Ratios are generally preferred, as they suggest a better trade-off between risk and return.
 - It indicates if a certain investment fund is performing satisfactory on a risk adjusted basis (at the expense of a riskier portfolio.)
 
-
+## Calculate with Python:
 ```python
 def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='^GSPC'):
     """
@@ -215,7 +215,7 @@ def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='
     average_returns = returns.mean()
     
     # Calculate the standard deviation of the average returns and annualize it
-    std_dev = average_returns.std() * 250 ** 0.5
+    std_dev = average_returns.std() * 12 ** 0.5
     
     # Calculate the Sharpe ratio using the CAPM expected return and standard deviation
     sharpe_ratio = (capm_exp_ret - risk_free_rate) / std_dev
@@ -225,6 +225,13 @@ def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='
 # Example Usage
 calculate_sharpe_ratio(tickers, 0.0417, 0.05)
 ```
+## Note:
+One limitation of the provided code lies in the assumption made during the annualization of the standard deviation in the `calculate_sharpe_ratio` function. The code multiplies the standard deviation by the square root of 12 to convert it to an annualized measure, assuming that the `interval` parameter in the `periodic_stock_returns` function is set to "1mo" (monthly data). However, if it is set to any other value, such as "1d" for daily data or "1y" for yearly data, this assumption would lead to inaccurate annualization of the standard deviation. In such cases, the code would fail to appropriately adjust for the different intervals, potentially resulting in incorrect Sharpe Ratio calculations and misleading risk-adjusted performance assessments. 
+To rectify this limitation, the code should dynamically adjust the annualization factor based on the actual interval specified in the `periodic_stock_returns` function. This adjustment can be achieved by introducing a conditional statement that selects the appropriate annualization factor corresponding to the chosen interval, ensuring accurate conversion of standard deviation to an annualized measure regardless of the data interval used.
+
+# Summary:
+This project presents a thorough exploration of the Capital Asset Pricing Model (CAPM) and the Sharpe Ratio, along with their practical implementation in Python. It combines theoretical explanations with hands-on coding examples.
+
 # ____________________________________________________________________________
 <br><br><br><br><br><br><br>
 # **Additional Notes**
@@ -240,4 +247,29 @@ $$r_i = \alpha + r_f + \beta_{im}(r_m-r_f)$$
 - A practical implication is that a fund manager charging fees equivalent to 1% of the invested amount would need an $\alpha$ exceeding 1% to rationalize the associated costs.
 
 Note that alpha is comparable only when the risk profile (beta) of the investments being compared is similar.
+
+## Limitations of CAPM and Sharpe Ratio:
+
+1. Assumptions of CAPM:
+> CAPM relies on several assumptions, including perfect market conditions, rational investor behavior, and linear relationships between risk and return. In reality, these assumptions may not hold true, leading to potential inaccuracies in expected returns and risk assessments.  
+
+2. Single-Factor Model:
+> CAPM is a single-factor model that considers only systematic risk (beta) in determining expected returns. It ignores other relevant factors that may influence asset prices, such as company-specific events, macroeconomic indicators, and geopolitical risks. This limitation can result in mispricing of assets, especially during periods of market turbulence or structural changes.
+
+3. Market Efficiency:
+> CAPM assumes market efficiency, implying that all available information is reflected in asset prices. However, markets may not always be efficient, leading to mispricings and inefficiencies that CAPM fails to account for. Behavioral biases, information asymmetry, and market anomalies can challenge the validity of CAPM's predictions.
+
+4. Homogeneous Investor Preferences:
+> CAPM assumes that all investors have homogeneous risk preferences and investment horizons. In reality, investors exhibit diverse risk tolerances, investment objectives, and time horizons, leading to variations in asset valuations and expected returns. CAPM's homogeneity assumption oversimplifies investor behavior, potentially leading to inaccurate risk assessments.
+
+5. Non-Normal Distributions:
+> The Sharpe Ratio, like many risk-adjusted performance measures, assumes a normal distribution of returns. However, financial markets often exhibit non-normal distributions, including fat tails, skewness, and kurtosis. Non-normality can distort risk estimates and misrepresent the true risk-return profile of investments, undermining the reliability of the Sharpe Ratio.
+
+6. Sensitivity to Inputs:
+> Both CAPM and the Sharpe Ratio are sensitive to input parameters, such as the risk-free rate, market index selection, and estimation periods. Small changes in these inputs can lead to significant variations in model outputs, affecting investment decisions and performance evaluations.
+
+7. Historical Data Limitations:
+> CAPM and the Sharpe Ratio rely on historical data to estimate future returns and risk. However, past performance may not accurately predict future outcomes, especially during periods of structural shifts, regulatory changes, or technological innovations. Overreliance on historical data may result in suboptimal investment decisions and risk management strategies.
+  
+Addressing these limitations requires a nuanced understanding of financial markets, incorporating additional risk factors, utilizing alternative models, and employing robust risk management techniques. While CAPM and the Sharpe Ratio offer valuable insights into asset pricing and performance evaluation, investors should supplement these models with qualitative analysis and judgment to make informed investment decisions.
 
