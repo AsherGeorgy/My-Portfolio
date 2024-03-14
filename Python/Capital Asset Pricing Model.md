@@ -1,22 +1,36 @@
 # **Capital Asset Pricing Model (CAPM)**
+## Introduction
+This project provides a brief overview of the Capital Asset Pricing Model and its practical applications in financial analysis. Subsequently, it delves into the implementation of CAPM using Python, demonstrating how to calculate beta values and expected returns, and assess risk-adjusted returns using the Sharpe Ratio. 
 
+Libraries required:
+```python
+import pandas as pd
+import numpy as np
+import yfinance as yf
+```
+
+## Expected return ($r_i$)
 When an investor buys a share of a stock, they expect to earn a return that compensates them for the risk they're taking. <br><br>This compensation (return) is made up of a baseline risk-free return ($r_f$) and an additional return based on the risk of the stock, which is proportional to the overall market risk (equity risk premium), adjusted by the stock's sensitivity to market movements ($\beta_{im}$). <br> 
 
-Thus the **expected return ($r_i$)** on a particular stock  is given by:
+Thus the **expected return ($r_i$)** of a particular stock  is given by:
 
 $$r_i = r_f + \beta_{im}(r_m-r_f)$$ 
 
 where
->$r_f$ is the return an investor would get from a completely safe, risk-free investment. <br>
+>$r_f$ is the risk free rate <br>
 >$\beta_{im}$ is the beta between the stock and the market <br>
->$r_m$ is the expected return of a well-diversified portfolio that represents the overall market. It's a measure of how the entire market is expected to perform. <br>
+>$r_m$ is the expected market return <br>
 >$r_m - r_f$ is the equity risk premium
 
-**Equity risk premium** is the extra return that investors demand for holding a risky asset (like stocks) instead of a risk-free asset. It's essentially the additional compensation for taking on the risk associated with the stock market.
+- **Risk free rate** is the return an investor would get from a completely safe, risk-free investment. In reality, there is always some level of risk, but for the sake of this formula, it is assumed there is a risk-free asset with no risk.
 
-In reality, there is always some level of risk, but for the sake of this formula, it is assumed there is a risk-free asset with no risk.
+- **Expected market return** is the expected return of a well-diversified portfolio that represents the overall market. It's a measure of how the entire market is expected to perform. 
 
-## **Beta ($\beta$)**
+- **Equity risk premium** is the extra return that investors demand for holding a risky asset (like stocks) instead of a risk-free asset. It's essentially the additional compensation for taking on the risk associated with the stock market.
+
+
+
+### **Beta ($\beta$)**
 
 $\beta$ measures the sensitivity of a stock's returns to changes in the market.
 
@@ -29,15 +43,8 @@ where
 - A beta less than 1 indicates the stock is less volatile than the market.
 - A beta greater than 1 indicates higher volatility.
 
-## Running a CAPM :
-### Cal
-
-```python
-import pandas as pd
-import numpy as np
-import yfinance as yf
-```
-
+## CAPM with Python 
+### 1. Retrieve stock data and calculate log returns: 
 
 ```python
 def periodic_stock_returns(tickers, period, interval):
@@ -63,9 +70,13 @@ def periodic_stock_returns(tickers, period, interval):
     
     return data, returns
 
+# Example Usage
+tickers = ['WMT','KO','LMT','PFE']
+periodic_stock_returns(tickers, period="5y", interval="1mo")
 ```
+This example code returns the 5 year monthly adjusted closing prices and log returns of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc.
 
-
+### 2. Calculate Beta ($\beta_{im}$):
 ```python
 def calculate_beta(tickers, market_index='^GSPC'):
     """
@@ -101,11 +112,15 @@ def calculate_beta(tickers, market_index='^GSPC'):
     beta_df.name = 'Beta'
 
     return beta_df
+
+# Example Usage
+calculate_beta(tickers)
 ```
+Note that Beta calculated in this example is 5Y monthly. This can be changed in the `periodic_stock_returns` function. 
 
-## **Applying the CAPM formula:**
+### 3. Estimate expected returns ($r_i$):
 
-A 10 year US government bond can be considered risk free. Currently its yield is 4.19% [(Bloomberg.com)](*https://www.bloomberg.com/markets/rates-bonds/government-bonds/us) <br>
+A 10 year US government bond can be considered risk free. Its yield as of 13 March 2024 is 4.19% [(Bloomberg.com)](https://www.bloomberg.com/markets/rates-bonds/government-bonds/us) <br>
 
 
 ```python
@@ -139,6 +154,8 @@ def capm_expected_return(tickers, risk_free_rate, risk_premium, market_index='^G
     
     return CAPM_return
 
+# Example Usage
+capm_expected_return(tickers, 0.0417, 0.05)
 ```
 
 # **Sharpe Ratio**
@@ -152,7 +169,7 @@ where
 
 $r_i-r_f$ is the **excess return**, representing the return earned above the risk-free rate, while $\sigma_i$ is the **standard deviation** of the investment's returns. It serves as a measure of risk. 
 
-By dividing the excess return by the risk, the Sharpe Ratio quantifies how much return an investor is receiving per unit of risk taken. 
+By dividing the excess return by the risk, the Sharpe Ratio **quantifies how much return an investor is receiving per unit of risk taken**. 
 Investors and fund managers often use the Sharpe Ratio to compare the risk-adjusted performance of different investments or portfolios. 
 - Higher Sharpe Ratios are generally preferred, as they suggest a better trade-off between risk and return.
 - It indicates if a certain investment fund is performing satisfactory on a risk adjusted basis (at the expense of a riskier portfolio.)
@@ -190,9 +207,15 @@ def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='
     sharpe_ratio = (capm_exp_ret - risk_free_rate) / std_dev
     
     return sharpe_ratio
+
+# Example Usage
+calculate_sharpe_ratio(tickers, 0.0417, 0.05)
 ```
-# Additional Notes:
-## **Alpha</u> ($\alpha$)**
+# ____________________________________________________________________________
+<br><br><br><br><br><br><br>
+# **Additional Notes**
+
+## **Alpha ($\alpha$)**
 
 Alpha is a key metric used to evaluate the performance of an investment. It represents the excess return generated beyond what would be expected based on the inherent risks associated with the market. The standard CAPM setting assumes efficient financial market and therefore an $\alpha$ of zero. It is included in the augmented CAPM expected return formula:
 
