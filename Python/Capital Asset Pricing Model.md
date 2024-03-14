@@ -1,4 +1,18 @@
 # **Capital Asset Pricing Model (CAPM)**
+
+## Table of Contents
+1. [Introduction](#introduction)
+   - [Expected Return](#expected-return-r_i)
+   - [Beta](#beta-beta)
+2. [CAPM with Python](#capm-with-python)
+   - [1.Retrieve stock data and calculate log returns](#1-retrieve-stock-data-and-calculate-log-returns)
+   - [2.Calculate Beta](#2-calculate-beta-beta_im)
+   - [3.Estimate expected returns](#3-estimate-expected-returns-r_i)
+3. [Sharpe Ratio](#sharpe-ratio)
+   - [Calculate with Python](#1-retrieve-stock-data-and-calculate-log-returns)
+5. [Summary](#summary) 
+6. [Additional Notes](#additional-notes)
+
 ## Introduction
 This project provides a brief overview of the Capital Asset Pricing Model and its practical applications in financial analysis. Subsequently, it delves into the implementation of CAPM using Python, demonstrating how to calculate beta values and expected returns, and assess risk-adjusted returns using the Sharpe Ratio. 
 
