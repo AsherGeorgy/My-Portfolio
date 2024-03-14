@@ -10,7 +10,7 @@
    - [3.Estimate expected returns](#3-estimate-expected-returns-r_i)
 3. [Sharpe Ratio](#sharpe-ratio)
    - [Calculate with Python](#calculate-with-python)
-   - [Limitation](#limitation)
+4. [Limitation](#limitation)
 5. [Summary](#summary) 
 6. [Additional Notes](#additional-notes)
 
@@ -131,7 +131,7 @@ def calculate_beta(tickers, market_index='^GSPC'):
 # Example Usage
 calculate_beta(tickers)
 ```
-Note that Beta calculated in this example is 5Y monthly. This can be changed in the `periodic_stock_returns` function. 
+This example code returns the Beta (5Y Monthly) of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc based on returns from the past 5 years. 
 
 ### 3. Estimate expected returns ($r_i$):
 
@@ -172,7 +172,7 @@ def capm_expected_return(tickers, risk_free_rate, risk_premium, market_index='^G
 # Example Usage
 capm_expected_return(tickers, 0.0417, 0.05)
 ```
-
+This example code returns the expected return of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc as per CAPM. 
 # **Sharpe Ratio**
 
 The Sharpe Ratio is a measure of risk-adjusted return, commonly used to evaluate the performance of an investment or a portfolio. 
@@ -226,9 +226,9 @@ def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='
 # Example Usage
 calculate_sharpe_ratio(tickers, 0.0417, 0.05)
 ```
-## Limitation
-One limitation of the provided code lies in the assumption made during the annualization of the standard deviation in the `calculate_sharpe_ratio` function. The code multiplies the standard deviation by the square root of 12 to convert it to an annualized measure, assuming that the `interval` parameter in the `periodic_stock_returns` function is set to "1mo" (monthly data). However, if it is set to any other value, such as "1d" for daily data or "1y" for yearly data, this assumption would lead to inaccurate annualization of the standard deviation. In such cases, the code would fail to appropriately adjust for the different intervals, potentially resulting in incorrect Sharpe Ratio calculations and misleading risk-adjusted performance assessments. <br>
-To rectify this limitation, the code should dynamically adjust the annualization factor based on the actual interval specified in the `periodic_stock_returns` function. This adjustment can be achieved by introducing a conditional statement that selects the appropriate annualization factor corresponding to the chosen interval, ensuring accurate conversion of standard deviation to an annualized measure regardless of the data interval used.
+# Limitation
+One limitation of the provided code lies in the assumption made during the annualization of the covariance and standard deviation in the functions `calculate_beta` and `calculate_sharpe_ratio` respectively. The code multiplies the them by  12 to convert it to an annualized measure, assuming that the `interval` parameter in the `periodic_stock_returns` function is set to "1mo" (monthly data). However, if it is set to any other value, such as "1d" for daily data or "1y" for yearly data, this assumption would lead to inaccurate annualization. In such cases, the code would fail to appropriately adjust for the different intervals, potentially resulting in incorrect calculations and misleading assessments. <br>
+To rectify this limitation, the code should include a conditional statement that selects the appropriate annualization factor corresponding to the chosen interval, ensuring accurate conversion to an annualized measure regardless of the data interval used.
 
 # Summary
 This project presents a thorough exploration of the Capital Asset Pricing Model (CAPM) and the Sharpe Ratio, along with their practical implementation in Python. It combines theoretical explanations with hands-on coding examples.
