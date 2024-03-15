@@ -131,7 +131,7 @@ def calculate_beta(tickers, market_index='^GSPC'):
 # Example Usage
 calculate_beta(tickers)
 ```
-This example code returns the Beta (5Y Monthly) of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc based on returns from the past 5 years. 
+This example code returns the Beta (5Y Monthly) of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc based on returns from the past 5 years. 
 
 ### 3. Estimate expected returns ($r_i$):
 
@@ -172,7 +172,7 @@ def capm_expected_return(tickers, risk_free_rate, risk_premium, market_index='^G
 # Example Usage
 capm_expected_return(tickers, 0.0417, 0.05)
 ```
-This example code returns the expected return of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc as per CAPM. 
+This example code returns the expected return of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc as per CAPM. 
 # **Sharpe Ratio**
 
 The Sharpe Ratio is a measure of risk-adjusted return, commonly used to evaluate the performance of an investment or a portfolio. 
@@ -226,8 +226,9 @@ def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='
 # Example Usage
 calculate_sharpe_ratio(tickers, 0.0417, 0.05)
 ```
+The above example code returns the sharpe ratio of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc. 
 # Limitation
-One limitation of the provided code lies in the assumption made during the annualization of the covariance and standard deviation in the functions `calculate_beta` and `calculate_sharpe_ratio` respectively. The code multiplies the them by  12 to convert it to an annualized measure, assuming that the `interval` parameter in the `periodic_stock_returns` function is set to "1mo" (monthly data). However, if it is set to any other value, such as "1d" for daily data or "1y" for yearly data, this assumption would lead to inaccurate annualization. In such cases, the code would fail to appropriately adjust for the different intervals, potentially resulting in incorrect calculations and misleading assessments. <br>
+One limitation of the provided code lies in the assumption made during the annualization of covariance and standard deviation in the functions `calculate_beta` and `calculate_sharpe_ratio` respectively. The code multiplies the them by  12 to convert it to an annualized measure, assuming that the `interval` parameter in the `periodic_stock_returns` function is set to "1mo" (monthly data). However, if it is set to any other value, such as "1d" for daily data or "1y" for yearly data, this assumption would lead to inaccurate annualization. In such cases, the code would fail to appropriately adjust for the different intervals, potentially resulting in incorrect calculations and misleading assessments. <br>
 To rectify this limitation, the code should include a conditional statement that selects the appropriate annualization factor corresponding to the chosen interval, ensuring accurate conversion to an annualized measure regardless of the data interval used.
 
 # Summary
