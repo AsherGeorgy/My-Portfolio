@@ -4,18 +4,14 @@
 
 1. [Introduction](#introduction)
 2. [Markowitz Portfolio Theory](#markowitz-portfolio-theory)
-    - [Diversification](#diversification)
-    - [Risk and Return](#risk-and-return)
-    - [Covariance and Correlation](#covariance-and-correlation)
-    - [Portfolio Optimization](#portfolio-optimization)
     - [Efficient Frontier](#efficient-frontier)
 3. [Portfolio Optimization with Python](#portfolio-optimization-with-python)
     - [Risk, Return, and Sharpe Ratio](#risk-return-and-sharpe-ratio)
     - [Monte Carlo Efficient Frontier Simulation](#monte-carlo-efficient-frontier-simulation)
     - [Optimization with Scipy](#optimization-with-scipy)
-4. [Running the Optimization](#running-the-optimization)
-5. [Analysis](#analysis)
-6. [Conclusion](#conclusion)
+    - [Running the Optimization](#running-the-optimization)
+    - [Analysis](#analysis)
+    - [Conclusion](#conclusion)
 
 
 # Introduction
@@ -32,7 +28,7 @@ Key points:
 
 - **Risk and Return**: The goal of investors is to maximize returns while minimizing risk by combining assets in a way that their individual risks offset each other to some extent.
 
-- **Covariance and Correlation**: Diversification is most effective when assets have low or negative correlations. Lower the correlation coefficient, the greater the diversification effect the stocks will have, i.e. the combined standard deviation decreases (the ''$2w_1\sigma_1w_2\sigma_2\rho_{12}$'' term in $(w_1\sigma_1 + w_2\sigma_2)^2$).
+- **Covariance and Correlation**: Diversification is most effective when assets have low or negative correlations. Lower the correlation coefficient, the greater the diversification effect the stocks will have, i.e. the combined standard deviation decreases (the $(2w_1\sigma_1w_2\sigma_2\rho_{12})$ term in $(w_1\sigma_1 + w_2\sigma_2)^2$).
 
 - **Portfolio Optimization**: The process of mathematically determining the best mix of assets to achieve the desired level of return with the least amount of risk. It involves using quantitative techniques, such as mathematical optimization models, to allocate capital across different assets. The goal is to construct a portfolio on the efficient frontier.
 
@@ -56,6 +52,7 @@ Applying Python to plot the efficient frontier for a given portfolio of stocks:
 
 ## Risk, Return and Sharpe Ratio
 
+**Import necessary libraries and modules:**
 
 ```python
 import numpy as np
@@ -65,7 +62,7 @@ from datetime import datetime, timedelta
 import yfinance as yf
 ```
 
-
+**Retrieve stock price data:** 
 ```python
 def retrieve_data(tickers, start_date=None, end_date=None, no_of_years=None, interval='1d'):
     """
@@ -111,7 +108,7 @@ def retrieve_data(tickers, start_date=None, end_date=None, no_of_years=None, int
     return adj_close, tickers
 ```
 
-
+**Calculate returns, covariance and correlation between each stock:**
 ```python
 def return_stats(adj_close, tickers):
     """
@@ -147,7 +144,7 @@ def return_stats(adj_close, tickers):
     return returns, returns_ann, returns_cov, returns_corr
 ```
 
-
+**Retrieve risk free rate from Federal Reserve Economic Data (FRED) provided by the Federal Reserve Bank of St. Louis. using Fred API:**
 ```python
 from fredapi import Fred
 
@@ -167,8 +164,9 @@ def retrieve_risk_free_rate(api_key=None):
     risk_free_rate = ten_year_treasury_rate.iloc[-1]
     return risk_free_rate
 ```
+"GS10" refers to the 10-year Treasury Constant Maturity Rate. This is the interest rate at which the U.S. government bonds with a maturity of approximately 10 years are issued (assumed to be the risk free rate)
 
-
+**Calculate Portfolio return, volatility and sharpe ratio:**
 ```python
 def portfolio_stats(weights, returns_ann, returns_cov, risk_free_rate):
     """
@@ -196,7 +194,7 @@ To plot the Efficient frontier, multiple iterations of the portfolio with varyin
 
 >The **np.random.random()** is used to obtain random floats counting equal to the count of tickers. Each float is then divided by the numpy sum of the floats to get the weights, such that the sum of weights = 1. The logic is $\frac{a}{a+b} + \frac{b}{a+b} = 1$.
 
-
+**A DataFrame with simulated weights, their corresponding portfolio returns, volatilities and sharpe ratios is constructed in order to plot the efficient frontier of the portfolio:**
 ```python
 def eff_frontier(tickers, returns_ann, returns_cov, risk_free_rate, no_of_iterations=1000):
     """
@@ -246,6 +244,7 @@ def eff_frontier(tickers, returns_ann, returns_cov, risk_free_rate, no_of_iterat
 
 From the simulated data, portfolios with the highest return, highest sharpe ratio and lowest volatility can be identified along with with their corresponding weights. 
 
+**Plot:**
 
 ```python
 def eff_frontier_plot(tickers, weights, pfolio_return, pfolio_volatility, sharpe_ratios, eff_front, risk_free_rate):
@@ -310,9 +309,9 @@ def eff_frontier_plot(tickers, weights, pfolio_return, pfolio_volatility, sharpe
 
 ## Optimization with Scipy
 
-Using the **minimize()** function from **Scipy optimize** module, the portfolio optimized for the highest sharpe ratio (under some constraints) can be obtained. The Sequential Least Squares Programming (SLSQP) method is used here.  
+Using the **minimize()** function from **Scipy optimize** module, the portfolio optimized for the highest sharpe ratio (under some constraints) can be obtained. The Sequential Least Squares Programming (SLSQP) method is used here. <br><br>
 
-### Optimize for minimum volatility and a target return of 20.0%
+**Optimize for minimum volatility and a target return of 20.0%**
 
 
 ```python
@@ -353,7 +352,7 @@ def opt_portfolio_min_volatility(tickers, returns_ann, returns_cov, risk_free_ra
     return optimized_results.x
 ```
 
-
+**Plot the optimized porfolio weights in a pie chart:**
 ```python
 def opt_portfolio_plot(tickers, optimal_weights, returns_ann, returns_cov, risk_free_rate, min_return):
     """
@@ -426,76 +425,6 @@ if __name__ == "__main__":
 
 ```
 
-    [*********************100%%**********************]  1 of 1 completed
-    [*********************100%%**********************]  1 of 1 completed
-    
-
-    
-    The following analysis is based on daily adjusted closing price data from 2014-03-26 to 2024-03-25:
-    
-    Annualized Total Returns (Daily):
-      AAPL: 23.03%
-      WMT: 10.77%
-    
-    Annual Volatility:
-      AAPL: 28.23%
-      WMT: 20.73%
-    
-    Correlation matrix: 
-           AAPL    WMT
-    AAPL  1.000  0.322
-    WMT   0.322  1.000
-    
-    
-
-
-    
-![png](output_23_2.png)
-    
-
-
-    Efficient Frontier Portfolios:
-    
-    (a) Minimum volatility portfolio: 
-      1. Weights:
-          AAPL: 0.285
-          WMT: 0.715
-      2. Portfolio Return: 14.26%
-      3. Portfolio Volatility: 19.01%
-      4. Sharpe Ratio:0.7482
-    
-    (b) Maximum return portfolio: 
-      1. Weights:
-          AAPL: 1.000
-          WMT: 0.000
-      2. Expected Annual Return: 23.03%
-      3. Expected Volatility: 28.22%
-      4. Sharpe Ratio:0.8145
-    
-    (c) Maximum Sharpe Ratio portfolio: 
-      1. Weights:
-          AAPL: 0.652
-          WMT: 0.348
-      2. Portfolio Return: 18.76%
-      3. Portfolio Volatility: 21.82%
-      4. Sharpe Ratio:0.8579
-    
-    Optimized Portfilio:
-    
-    (a) The portfolio optimized for minimum volatility and a target return of 20.0% (subject to constraints): 
-      1. Weights:
-          AAPL: 0.753
-          WMT: 0.247
-      2. Expected Annual Return: 20.00%
-      3. Expected Volatility: 23.41%
-      4. Sharpe Ratio: 0.6746
-    
-    
-
-
-    
-![png](output_23_4.png)
-    
 
 
 ## Analysis
@@ -518,8 +447,3 @@ The following conclusions can be drawn based on the analysis of Apple (AAPL) and
 
 ## Conclusion
 The analysis underscores the fundamental risk-return tradeoff in investing. Portfolios with higher expected returns typically comes with increased volatility. 
-
-
-```python
-
-```
