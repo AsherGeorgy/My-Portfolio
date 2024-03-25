@@ -157,7 +157,7 @@ def retrieve_risk_free_rate(api_key=None):
     Returns:
         float: Risk-free rate.
     """
-    api_key = api_key or '5dbe996305fb72e106205e372aa30fb8'
+    api_key = api_key or '5dbe996305fb72e106205e372aa3Ofb8'
     fred = Fred(api_key=api_key)
     ten_year_treasury_rate = fred.get_series_latest_release('GS10') / 100
     risk_free_rate = ten_year_treasury_rate.iloc[-1]
