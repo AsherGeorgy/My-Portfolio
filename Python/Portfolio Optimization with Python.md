@@ -10,6 +10,7 @@
     - [Monte Carlo Efficient Frontier Simulation](#monte-carlo-efficient-frontier-simulation)
     - [Optimization with Scipy](#optimization-with-scipy)
     - [Running the Optimization](#running-the-optimization)
+    - [Outputs](#outputs)
     - [Analysis](#analysis)
     - [Conclusion](#conclusion)
 
@@ -38,7 +39,7 @@ Graphical representation of optimal portfolios that offer the maximum expected r
 **Example:** <br>
 Assuming there are only two hypothetical companies in an economy, here is an example of the portfolio's efficient frontier constructed on Microsoft Excel:
 
-![Screenshot (251).png](attachment:50f5d2d0-c50b-4b4b-991d-0971cc064d34.png)
+![Efficient Frontier Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Eff%20Frontier%20example.png)
 
 
 This is precisely what Markowitz suggests: There is a set of efficient portfolios that can provide a higher expected rate of return for the same or even lower risk. This group of portfolios is called the Efficient Frontier.
@@ -424,12 +425,70 @@ if __name__ == "__main__":
     main()
 
 ```
+## Output
+**The above code received the following outputs:**
+```
+The following analysis is based on daily adjusted closing price data from 2014-03-26 to 2024-03-25:
 
+Annualized Total Returns (Daily):
+  AAPL: 23.03%
+  WMT: 10.77%
+
+Annual Volatility:
+  AAPL: 28.23%
+  WMT: 20.73%
+
+Correlation matrix: 
+       AAPL    WMT
+AAPL  1.000  0.322
+WMT   0.322  1.000
+```
+![Efficient Frontier of the Portfolio](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Eff%20Frontier.png)
+
+```
+Efficient Frontier Portfolios:
+
+(a) Minimum volatility portfolio: 
+  1. Weights:
+      AAPL: 0.285
+      WMT: 0.715
+  2. Portfolio Return: 14.26%
+  3. Portfolio Volatility: 19.01%
+  4. Sharpe Ratio:0.7482
+
+(b) Maximum return portfolio: 
+  1. Weights:
+      AAPL: 1.000
+      WMT: 0.000
+  2. Expected Annual Return: 23.03%
+  3. Expected Volatility: 28.22%
+  4. Sharpe Ratio:0.8145
+
+(c) Maximum Sharpe Ratio portfolio: 
+  1. Weights:
+      AAPL: 0.652
+      WMT: 0.348
+  2. Portfolio Return: 18.76%
+  3. Portfolio Volatility: 21.82%
+  4. Sharpe Ratio:0.8579
+
+Optimized Portfilio:
+
+(a) The portfolio optimized for minimum volatility and a target return of 20.0% (subject to constraints): 
+  1. Weights:
+      AAPL: 0.753
+      WMT: 0.247
+  2. Expected Annual Return: 20.00%
+  3. Expected Volatility: 23.41%
+  4. Sharpe Ratio: 0.6746
+```
+
+![Optimized Portfolio Weights](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Opt%20Port%20Weights.png)
 
 
 ## Analysis
 
-The following conclusions can be drawn based on the analysis of Apple (AAPL) and Walmart (WMT) stocks using portfolio optimization techniques:
+The following conclusions can be drawn based on the above analysis of Apple (AAPL) and Walmart (WMT) stocks:
 
 - **Return and Volatility:** Apple has a significantly higher annualized return ($23.03$%) compared to Walmart ($10.77$%). However, Apple also exhibits higher volatility ($28.23$%) compared to Walmart ($20.73$%), implying that it carries more risk. <br>
   
