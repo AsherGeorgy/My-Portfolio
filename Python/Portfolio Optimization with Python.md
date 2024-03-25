@@ -425,7 +425,7 @@ if __name__ == "__main__":
     main()
 
 ```
-## Output
+## Outputs
 **The above code received the following outputs:**
 ```
 The following analysis is based on daily adjusted closing price data from 2014-03-26 to 2024-03-25:
