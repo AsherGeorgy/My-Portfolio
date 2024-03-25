@@ -49,8 +49,6 @@ This is precisely what Markowitz suggests: There is a set of efficient portfolio
 
 # **Portfolio Optimization with Python**
 
-Applying Python to plot the efficient frontier for a given portfolio of stocks:
-
 ## Risk, Return and Sharpe Ratio
 
 **Import necessary libraries and modules:**
