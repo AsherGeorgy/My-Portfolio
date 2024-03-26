@@ -106,7 +106,27 @@ def retrieve_data(tickers, start_date=None, end_date=None, no_of_years=None, int
     
     return adj_close, tickers
 ```
+**Retrieve risk free rate from Federal Reserve Economic Data (FRED) provided by the Federal Reserve Bank of St. Louis. using Fred API:**
+```python
+from fredapi import Fred
 
+def retrieve_risk_free_rate(api_key=None):
+    """
+    Retrieve the risk-free rate.
+
+    Args:
+        api_key (str, optional): API key for data source. Defaults to None.
+
+    Returns:
+        float: Risk-free rate.
+    """
+    api_key = api_key or '5dbe996305fb72e106205e372aa3Ofb8'
+    fred = Fred(api_key=api_key)
+    ten_year_treasury_rate = fred.get_series_latest_release('GS10') / 100
+    risk_free_rate = ten_year_treasury_rate.iloc[-1]
+    return risk_free_rate
+```
+"GS10" refers to the 10-year Treasury Constant Maturity Rate. This is the interest rate at which the U.S. government bonds with a maturity of approximately 10 years are issued (assumed to be the risk free rate) <br><br>
 **Calculate returns, covariance and correlation between each stock:**
 ```python
 def return_stats(adj_close, tickers):
@@ -142,28 +162,6 @@ def return_stats(adj_close, tickers):
 
     return returns, returns_ann, returns_cov, returns_corr
 ```
-
-**Retrieve risk free rate from Federal Reserve Economic Data (FRED) provided by the Federal Reserve Bank of St. Louis. using Fred API:**
-```python
-from fredapi import Fred
-
-def retrieve_risk_free_rate(api_key=None):
-    """
-    Retrieve the risk-free rate.
-
-    Args:
-        api_key (str, optional): API key for data source. Defaults to None.
-
-    Returns:
-        float: Risk-free rate.
-    """
-    api_key = api_key or '5dbe996305fb72e106205e372aa3Ofb8'
-    fred = Fred(api_key=api_key)
-    ten_year_treasury_rate = fred.get_series_latest_release('GS10') / 100
-    risk_free_rate = ten_year_treasury_rate.iloc[-1]
-    return risk_free_rate
-```
-"GS10" refers to the 10-year Treasury Constant Maturity Rate. This is the interest rate at which the U.S. government bonds with a maturity of approximately 10 years are issued (assumed to be the risk free rate)
 
 **Calculate Portfolio return, volatility and sharpe ratio:**
 ```python
