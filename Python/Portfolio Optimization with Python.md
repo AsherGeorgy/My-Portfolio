@@ -7,7 +7,6 @@
 3. [Markowitz Portfolio Theory](#markowitz-portfolio-theory)
     - [Efficient Frontier](#efficient-frontier)
 4. [Implementation with Python](#implementation-with-python)
-    - [Risk, Return, and Sharpe Ratio](#risk-return-and-sharpe-ratio)
     - [Monte Carlo Simulation](#monte-carlo-simulation)
     - [Optimization with CVXPY](#optimization-with-cvxpy)
     - [visualizaton](#visualization)
