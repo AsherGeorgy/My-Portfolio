@@ -3,13 +3,15 @@
 # Table of Contents
 
 1. [Introduction](#introduction)
-2. [Markowitz Portfolio Theory](#markowitz-portfolio-theory)
+2. [Mean Variance Optimization](#mean-variance-optimization)
+3. [Markowitz Portfolio Theory](#markowitz-portfolio-theory)
     - [Efficient Frontier](#efficient-frontier)
-3. [Portfolio Optimization with Python](#portfolio-optimization-with-python)
+4. [Implementation with Python](#implementation-with-python)
     - [Risk, Return, and Sharpe Ratio](#risk-return-and-sharpe-ratio)
-    - [Monte Carlo Efficient Frontier Simulation](#monte-carlo-efficient-frontier-simulation)
-    - [Optimization with Scipy](#optimization-with-scipy)
-    - [Running the Optimization](#running-the-optimization)
+    - [Monte Carlo Simulation](#monte-carlo-simulation)
+    - [Optimization with CVXPY](#optimization-with-cvxpy)
+    - [visualizaton](#visualization)
+    - [Running the Program](#running-the-program)
     - [Outputs](#outputs)
     - [Analysis](#analysis)
     - [Conclusion](#conclusion)
@@ -17,8 +19,10 @@
 
 # Introduction
 This project performs comprehensive portfolio analysis, utilizing historical market data to assess the performance and optimize the allocation of assets. 
-- Incorporates **mean-variance optimization** techniques, to strike a balance between risk and return while considering a specified minimum return constraint.
-- Implements the principles of Markowitz Portfolio Theory by leveraging statistical measures to evaluate individual assets and construct **efficient portfolios**.
+- Incorporates mean-variance optimization techniques, to strike a balance between risk and return while considering a specified minimum return constraint.
+- Implements the principles of Markowitz Portfolio Theory by leveraging statistical measures to evaluate individual assets and construct efficient portfolios.
+- Benchmarks portfolios against the S&P 500 index.
+- Creates interactive visualizations to aid decision making. 
 
 # Mean Variance Optimization
 Mean-variance optimization is a fundamental concept in modern portfolio theory, pioneered by Harry Markowitz. It helps investors determine the biggest reward at a given level of risk or the least risk at a given level of return.     
@@ -51,7 +55,7 @@ This is precisely what Markowitz suggests: There is a set of efficient portfolio
 - Its starting point is the minimum variance portfolio, the lowest risk an investor could bear. 
 - Points below the efficient frontier represent inefficient portfolios, as for each, there exists an alternative portfolio with greater expected return for the same level of standard deviation.
 
-# **Optimization with Python**
+# **Implementation with Python**
 
 **Import necessary libraries and modules:**
 
@@ -255,7 +259,7 @@ def portfolio_stats(weights, returns_assets, cov_assets, risk_free_rate):
     return portfolio_return, portfolio_volatility, sharpe_ratio
 ```
 
-## Monte Carlo Efficient Frontier Simulation
+## Monte Carlo Simulation
 To plot the Efficient frontier, multiple iterations of the portfolio with varying weights are required. A 'for' loop combined with NumPy's 'random' module can be used to achieve this. 
 
 >The **np.random.random()** is used to obtain random floats counting equal to the count of tickers. Each float is then divided by the numpy sum of the floats to get the weights, such that the sum of weights = 1. The logic is $\frac{a}{a+b} + \frac{b}{a+b} = 1$.
@@ -366,7 +370,7 @@ def opt_portfolio_cvxpy(returns_assets_ann, returns_assets_cov, risk_free_rate, 
     
     return optimal_weights 
 ```
-```
+```python
 def opt_portfolio_results(optimal_weights, returns_assets_ann, returns_assets_cov, risk_free_rate, assets, min_return, benchmark_index):
         """
     Calculate and display the results of mean-variance portfolio optimization.
@@ -701,4 +705,5 @@ The following insights can be drawn based on the above analysis of Apple (AAPL) 
    - The portfolio analysis highlights the importance of diversification in managing risk and optimizing returns, as seen in the efficient frontier portfolios.
 
 ## Conclusion
-The analysis underscores the fundamental risk-return tradeoff in investing. Portfolios with higher expected returns typically comes with increased volatility. It's essential for investors to assess their risk tolerance, investment objectives, and time horizon before making investment decisions. Diversification, thorough research, and understanding individual company fundamentals are crucial aspects of constructing a well-balanced investment portfolio. 
+The analysis underscores the fundamental risk-return tradeoff in investing. Portfolios with higher expected returns typically comes with increased volatility.   
+It's essential for investors to assess their risk tolerance, investment objectives, and time horizon before making investment decisions. Diversification, thorough research, and understanding individual company fundamentals are crucial aspects of constructing a well-balanced investment portfolio. 
