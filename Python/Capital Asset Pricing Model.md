@@ -49,7 +49,8 @@ where
 
 $\beta$ measures the sensitivity of a stock's returns to changes in the market.
 
-$$\beta_x = \frac{{Cov}_{x,m}}{Var_m} $$ 
+$$\beta_x = \frac{{{{Cov}}_{x,m}}}{Var_m} $$
+
 where 
 > $x$ represents the asset <br>
 > $m$ represents the market 
