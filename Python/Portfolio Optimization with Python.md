@@ -9,7 +9,7 @@
 4. [Implementation with Python](#implementation-with-python)
     - [Monte Carlo Simulation](#monte-carlo-simulation)
     - [Optimization with CVXPY](#optimization-with-cvxpy)
-    - [visualizaton](#visualization)
+    - [Visualizaton](#visualization)
     - [Running the Program](#running-the-program)
     - [Outputs](#outputs)
     - [Analysis](#analysis)
