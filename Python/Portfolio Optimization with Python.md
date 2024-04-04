@@ -259,6 +259,8 @@ def portfolio_stats(weights, returns_assets, cov_assets, risk_free_rate):
 ```
 
 ## Monte Carlo Simulation
+A Monte Carlo simulation is carried out to observe the different possible realizations of a future event. Past data is used to create a simulation – a new set of fictional but sensible data. The large level of uncertainty in finance makes Monte Carlo a valuable tool that improves the decision making process when several random variables are in play. 
+
 To plot the Efficient frontier, multiple iterations of the portfolio with varying weights are required. A 'for' loop combined with NumPy's 'random' module can be used to achieve this. 
 
 >The **np.random.random()** is used to obtain random floats counting equal to the count of tickers. Each float is then divided by the numpy sum of the floats to get the weights, such that the sum of weights = 1. The logic is $\frac{a}{a+b} + \frac{b}{a+b} = 1$.
