@@ -1,8 +1,13 @@
-# DRAFT: Discounted Cash Flow Model
+# Financial Modeling and Valuation Analysis 
 
-This Excel based financial model [(download)](link/to/your/excel/file.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis of a startup firm. 
+This Excel based financial model [(download)](https://github.com/ashergeo/My-Portfolio/raw/gh-pages/assets/Microsoft%20Excel/3S%20Model%20&%20Scenario%20Analysis.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis. 
 
 ## Project Overview
+• Comprehensive financial model to analyze company performance and valuation, incorporating the three financial statements: Income Statement, Balance Sheet, and Cash Flow Statement.  
+
+• Discounted Cash Flow (DCF) analysis to estimate the intrinsic value of the company, considering future cash flows, terminal value, and discount rates.  
+
+• Dynamic dashboard to present key findings and allow scenario analysis, illustrating various possible outcomes.
 
 ### Features
 
@@ -41,32 +46,5 @@ This Excel based financial model [(download)](link/to/your/excel/file.xlsx) is d
    - The Summary Dashboard is dynamic, as it is linked to model outputs.
 
 ## Screenshots
-**:**  
-    ![](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/)
-
----
-
-**:**   
-    ![](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/) 
-
----
-
-**:**  
-    ![](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/)  
-
----
-
-**:**  
-    ![](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/)  
-
----
-
-**:**  
-    ![](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/) 
-
----
-
-**:**  
-    ![](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/)  
-
----
+**Dashboard:**  
+    ![Dashboard](https://github.com/ashergeo/My-Portfolio/blob/gh-pages/assets/Microsoft%20Excel/Picture2.png?raw=true)
