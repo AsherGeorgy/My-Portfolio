@@ -564,15 +564,6 @@ The program is run for a portfolio of Apple and Walmart stocks, for a target ret
 def main():
     """
     Main function to orchestrate the portfolio analysis process.
-
-    This function retrieves historical market data, calculates various statistics,
-    performs mean-variance optimization, visualizes the results, and prints summaries.
-
-    Returns:
-    -------
-    None
-        The function doesn't return any value explicitly but performs the analysis
-        and prints the results.
     """
 
     # Inputs
