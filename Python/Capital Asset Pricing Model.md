@@ -22,6 +22,7 @@ Libraries required:
 import pandas as pd
 import numpy as np
 import yfinance as yf
+import matplotlib.pyplot as plt
 ```
 
 ### Expected return ($r_i$)
@@ -130,9 +131,18 @@ def calculate_beta(tickers, market_index='^GSPC'):
     return beta_df
 
 # Example Usage
-calculate_beta(tickers)
+beta = calculate_beta(tickers)
+print(beta)
+
+beta.plot(kind='bar')
+plt.xlabel('Tickers')
+plt.ylabel('Beta')
+plt.title('Beta Values')
+plt.show()
 ```
-This example code returns the Beta (5Y Monthly) of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc based on returns from the past 5 years. 
+This example code returns the Beta (5Y Monthly) of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc based on returns from the past 5 years and plots them on a bar graph.
+
+![Beta](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(286).png) 
 
 ### 3. Estimate expected returns ($r_i$):
 
@@ -171,9 +181,19 @@ def capm_expected_return(tickers, risk_free_rate, risk_premium, market_index='^G
     return CAPM_return
 
 # Example Usage
-capm_expected_return(tickers, 0.0417, 0.05)
+capm = capm_expected_return(tickers, 0.0417, 0.05)
+print(capm)
+
+capm.plot(kind='bar')
+plt.xlabel('Tickers')
+plt.ylabel('Expected Return')
+plt.title('Expected Return CAPM')
+plt.show()
 ```
-This example code returns the expected return of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc as per CAPM. 
+This example code returns the expected return of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc as per CAPM and plots them on a bar graph.
+
+![Expected Return](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(287).png) 
+
 # **Sharpe Ratio**
 
 The Sharpe Ratio is a measure of risk-adjusted return, commonly used to evaluate the performance of an investment or a portfolio. 
@@ -225,9 +245,19 @@ def calculate_sharpe_ratio(tickers, risk_free_rate, risk_premium, market_index='
     return sharpe_ratio
 
 # Example Usage
-calculate_sharpe_ratio(tickers, 0.0417, 0.05)
+sharpe = calculate_sharpe_ratio(tickers, 0.0417, 0.05)
+print(sharpe)
+
+sharpe.plot(kind='bar')
+plt.xlabel('Tickers')
+plt.ylabel('Sharpe Ratio')
+plt.title('Sharpe Ratios')
+plt.show()
 ```
-The above example code returns the sharpe ratio of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc. 
+The above example code returns the sharpe ratio of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc and plots them on a bar graph.
+
+![Sharpe Ratio](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(288).png) 
+
 # Limitation
 One limitation of the provided code lies in the assumption made during the annualization of covariance and standard deviation in the functions `calculate_beta` and `calculate_sharpe_ratio` respectively. The code multiplies the them by  12 to convert it to an annualized measure, assuming that the `interval` parameter in the `periodic_stock_returns` function is set to "1mo" (monthly data). However, if it is set to any other value, such as "1d" for daily data or "1y" for yearly data, this assumption would lead to inaccurate annualization. In such cases, the code would fail to appropriately adjust for the different intervals, potentially resulting in incorrect calculations and misleading assessments. <br>
 To rectify this limitation, the code should include a conditional statement that selects the appropriate annualization factor corresponding to the chosen interval, ensuring accurate conversion to an annualized measure regardless of the data interval used.
