@@ -373,7 +373,7 @@ def opt_portfolio_cvxpy(returns_assets_ann, returns_assets_cov, risk_free_rate, 
 ```
 ```python
 def opt_portfolio_results(optimal_weights, returns_assets_ann, returns_assets_cov, risk_free_rate, assets, min_return, benchmark_index):
-        """
+    """
     Calculate and display the results of mean-variance portfolio optimization.
 
     Parameters:
@@ -397,12 +397,19 @@ def opt_portfolio_results(optimal_weights, returns_assets_ann, returns_assets_co
     --------
     None
     """
-    optimal_portfolio_return, optimal_portfolio_volatility, optimal_sharpe_ratio = portfolio_stats(optimal_weights, returns_assets_ann, returns_assets_cov, risk_free_rate)
+    optimal_portfolio_return, optimal_portfolio_volatility, optimal_sharpe_ratio = portfolio_stats(
+        optimal_weights, 
+        returns_assets_ann, 
+        returns_assets_cov, 
+        risk_free_rate
+    )
     
     print()
     print(f'\nPortfolio Analysis: \n\nA. Mean-Variance Optimization (cvxpy):\n\nPortfolio optimized to minimize volatility while achieving a target return of {min_return*100}% (subject to constraints): \n  1. Weights:')
+    
     for ticker, weight in zip(assets, optimal_weights):
-        print (f'      {ticker}: {weight:.3f}')
+        print(f'      {ticker}: {weight:.3f}')
+    
     print(f'  2. Expected Annual Return: {optimal_portfolio_return*100:.2f}%\n  3. Expected Volatility: {optimal_portfolio_volatility*100:.2f}%\n  4. Sharpe Ratio: {optimal_sharpe_ratio:.4f}\n')
 ```
 
@@ -489,15 +496,15 @@ def visualize_analyses(pfolio_volatility, pfolio_return, weights, sharpe_ratios,
     cumprod_df['Maximum Sharpe ratio Porfolio']  = pfolio_returns_at_max_sharpe_weights
     cumprod_df['Minimum Volatility Porfolio']  = pfolio_returns_at_min_vol_weights
     cumprod_df['Maximum Return Porfolio']  = pfolio_returns_at_max_ret_weights
-    cumprod_df['Optimized Porfolio']  = pfolio_returns_at_optimal_weights
+    cumprod_df['Optimized Portfolio']  = pfolio_returns_at_optimal_weights
     
     # 6. Calculate cumulative product of the dataframe in order to compare relative movements
     cumprod_df = (1 + cumprod_df).cumprod() - 1
     
     
     # Plot Relative return movements of Optimal Portfolio Vs Benchmark Index
-    cumprod_df[[benchmark_name, 'Minimum Volatility Porfolio']].plot(figsize=(10,6))
-    plt.title(f'\nComparing Relative Daily Return Movements: Optimized Portfolio Vs {benchmark_name}\n')
+    cumprod_df[[benchmark_name, 'Optimized Portfolio']].plot(figsize=(10,6))
+    plt.title(f'\nRelative Daily Return Movements: Optimized Portfolio Vs {benchmark_name}\n')
     plt.show() 
     print()
     
@@ -510,7 +517,7 @@ def visualize_analyses(pfolio_volatility, pfolio_return, weights, sharpe_ratios,
     fig.add_trace(go.Scatter(x=[vol_at_max_return], y=[max_return], mode='markers', name='Max Return', marker=dict(color='blue', size=10)))                             # Marker for Maximum Return Portfolio
     fig.add_trace(go.Scatter(x=[volatility_at_max_sharpe], y=[return_at_max_sharpe], mode='markers', name='Max Sharpe Ratio', marker=dict(color='red', size=10)))       # Marker for Maximum Sharpe Ratio
     
-    fig.update_layout(title='Interactive Efficient Frontier Visualization',
+    fig.update_layout(title=' Efficient Frontier Visualization',
                       xaxis_title='Standard Deviation (%)',
                       yaxis_title='Portfolio Return (%)')
     fig.show()
@@ -539,19 +546,19 @@ def visualize_analyses(pfolio_volatility, pfolio_return, weights, sharpe_ratios,
     # Plot relative daily return movements
     # 1. Minimum volatility portfolio
     cumprod_df[[benchmark_name, 'Minimum Volatility Porfolio']].plot(figsize=(10,6))
-    plt.title(f'\nComparing Relative Daily Return Movements: Minimum Volatility Portfolio Vs {benchmark_name}\n')
+    plt.title(f'\nRelative Daily Return Movements: Minimum Volatility Portfolio Vs {benchmark_name}\n')
     plt.show() 
     print()  
     
     # 2. Maximum return portfolio
     cumprod_df[[benchmark_name, 'Maximum Return Porfolio']].plot(figsize=(10,6))
-    plt.title(f'Comparing Relative Daily Return Movements: Maximum Return Porfolio Vs {benchmark_name}\n')
+    plt.title(f'Relative Daily Return Movements: Maximum Return Porfolio Vs {benchmark_name}\n')
     plt.show()
     print() 
     
     # 3. Maximum sharpe ratio portfolio
     cumprod_df[[benchmark_name, 'Maximum Sharpe ratio Porfolio']].plot(figsize=(10,6))
-    plt.title(f'Comparing Relative Daily Return Movements: Maximum Sharpe Ratio Portfolio Vs {benchmark_name}\n')
+    plt.title(f'Relative Daily Return Movements: Maximum Sharpe Ratio Portfolio Vs {benchmark_name}\n')
     plt.show()
     
     
@@ -606,29 +613,30 @@ if __name__ == "__main__":
 ```
 The following analysis is based on 10Y daily adjusted closing price data from Yahoo Fnance.
 
-Time period of analysis:    2014-04-02 to 2024-04-01
+Time period of analysis:    2014-10-01 to 2024-09-30
 Assets analysed:            Walmart Inc., Apple Inc.
 Index used as benchmark:    S&P 500
-Risk free rate used:        4.21%
+Risk free rate used:        3.72%
+
 
 
 Individual Asset Analysis: 
 
 Annualized 10 year Total Returns (Daily):
-  WMT: 12.69%
-  AAPL: 26.94%
-  ^GSPC: 11.73%
+  WMT: 15.68%
+  AAPL: 27.39%
+  ^GSPC: 12.32%
 
 Annual Volatility (10Y):
-  WMT: 20.72%
-  AAPL: 28.24%
-  ^GSPC: 17.66%
+  WMT: 21.05%
+  AAPL: 28.39%
+  ^GSPC: 17.78%
 
 Correlation matrix: 
          WMT   AAPL  ^GSPC
-WMT    1.000  0.323  0.442
-AAPL   0.323  1.000  0.748
-^GSPC  0.442  0.748  1.000
+WMT    1.000  0.314  0.432
+AAPL   0.314  1.000  0.748
+^GSPC  0.432  0.748  1.000
 
 
 
@@ -638,11 +646,11 @@ A. Mean-Variance Optimization (cvxpy):
 
 Portfolio optimized to minimize volatility while achieving a target return of 20.0% (subject to constraints): 
   1. Weights:
-      WMT: 0.487
-      AAPL: 0.513
+      WMT: 0.631
+      AAPL: 0.369
   2. Expected Annual Return: 20.00%
-  3. Expected Volatility: 20.15%
-  4. Sharpe Ratio: 0.7835
+  3. Expected Volatility: 19.33%
+  4. Sharpe Ratio: 0.8170
 ```
 ![Optimized](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/output_10_2.png)
 
@@ -655,27 +663,27 @@ Efficient Frontier Portfolios:
 
 (a) Minimum volatility portfolio: 
   1. Weights:
-      WMT: 0.716
-      AAPL: 0.284
-  2. Portfolio Return: 16.73%
-  3. Portfolio Volatility: 19.01%
-  4. Sharpe Ratio:0.8780
+      WMT: 0.708
+      AAPL: 0.292
+  2. Portfolio Return: 19.10%
+  3. Portfolio Volatility: 19.19%
+  4. Sharpe Ratio:0.9931
 
 (b) Maximum return portfolio: 
   1. Weights:
-      WMT: 0.000
-      AAPL: 1.000
-  2. Expected Annual Return: 26.93%
-  3. Expected Volatility: 28.23%
-  4. Sharpe Ratio:0.9527
+      WMT: 0.002
+      AAPL: 0.998
+  2. Expected Annual Return: 27.37%
+  3. Expected Volatility: 28.35%
+  4. Sharpe Ratio:0.9640
 
 (c) Maximum Sharpe Ratio portfolio: 
   1. Weights:
-      WMT: 0.353
-      AAPL: 0.647
-  2. Portfolio Return: 21.91%
-  3. Portfolio Volatility: 21.77%
-  4. Sharpe Ratio:1.0048
+      WMT: 0.449
+      AAPL: 0.551
+  2. Portfolio Return: 22.14%
+  3. Portfolio Volatility: 20.66%
+  4. Sharpe Ratio:1.0692
 ```
 
 ![Min Volatility](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/output_10_7.png)
