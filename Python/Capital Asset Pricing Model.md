@@ -142,7 +142,7 @@ plt.show()
 ```
 This example code returns the Beta (5Y Monthly) of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc based on returns from the past 5 years and plots them on a bar graph.
 
-![Beta](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(286).png) 
+![Beta](assets/Beta_Values.png) 
 
 ### 3. Estimate expected returns ($r_i$):
 
@@ -192,7 +192,7 @@ plt.show()
 ```
 This example code returns the expected return of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc as per CAPM and plots them on a bar graph.
 
-![Expected Return](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(287).png) 
+![Expected Return](assets/CAPM_Er.png) 
 
 # **Sharpe Ratio**
 
@@ -256,7 +256,7 @@ plt.show()
 ```
 The above example code returns the sharpe ratio of each of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc and plots them on a bar graph.
 
-![Sharpe Ratio](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(288).png) 
+![Sharpe Ratio](assets/CAPM_Sharpe.png) 
 
 # Limitation
 One limitation of the provided code lies in the assumption made during the annualization of covariance and standard deviation in the functions `calculate_beta` and `calculate_sharpe_ratio` respectively. The code multiplies the them by  12 to convert it to an annualized measure, assuming that the `interval` parameter in the `periodic_stock_returns` function is set to "1mo" (monthly data). However, if it is set to any other value, such as "1d" for daily data or "1y" for yearly data, this assumption would lead to inaccurate annualization. In such cases, the code would fail to appropriately adjust for the different intervals, potentially resulting in incorrect calculations and misleading assessments. <br>

@@ -163,7 +163,7 @@ start_date = datetime.datetime(2014, 1, 1)
 
 calculate_risk_return(tickers, start_date, print_results=True)
 ```
-![calculate_risk_return](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(246).png)
+![calculate_risk_return](assets/Avg_Risk_Return.png)
 ### Covariance and Correlation
 
 There might exist a relationship between stock prices of different companies. Covariance and Correlation quantifies the strength of such relationships. Investigating the reasons behind what causes them can help build optimal investment portfolios.  
@@ -230,7 +230,7 @@ tickers = ['TSLA', 'TM']
 start_date = datetime.datetime(2014, 1, 1)
 calculate_cov(tickers, start_date, print_results=True)
 ```
-![calculate_cov](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(247).png)
+![calculate_cov](assets/Var_Covar.png)
 ## <u> Portfolio Analysis
 
 ### <u> Portfolio Variance:
@@ -336,7 +336,7 @@ start_date = datetime.datetime(2007,1,1)
 end_date = datetime.datetime(2019,2,6)
 calculate_portfolio_risk(tickers, weights, start_date, end_date, print_results=True)
 ```
-![calculate_portfolio_risk](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(249).png)
+![calculate_portfolio_risk](assets/Risk_Decomp.png)
 # Summary
 This project successfully implements a set of Python functions for stock analysis, covering key aspects such as data retrieval, return calculation, risk metrics computation, covariance, correlation, and risk decomposition. The project demonstrates proficiency in Python programming as well as the ability to apply mathematical and financial concepts to real-world data.
 
