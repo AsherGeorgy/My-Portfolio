@@ -730,7 +730,7 @@ print(hqm_df)
 
 ## 8. Export 
 
-The final dataframe is exported to Excel using `xlsxwriter`. Download it ![here](assets/momentum_strategy.xlsx)
+The final dataframe is exported to Excel using `xlsxwriter`. Download it [here](https://github.com/AsherGeorgy/My-Portfolio/raw/refs/heads/main/Python/assets/momentum_strategy.xlsx)
 
 
 
@@ -743,7 +743,12 @@ writer.close()
 ```
 
 ## Conclusion
-This strategy effectively identifies stocks with strong momentum, allowing investors to make informed decisions. The results can be further analyzed or visualized for deeper insights.
+This strategy effectively identifies stocks with strong momentum, allowing investors to make informed decisions.  <br><br>The analysis highlighted three key performers:
+- **Vistra Corp (VST)**, with an impressive one-year price return of 292.34% and an HQM score of 98.0, indicating exceptional momentum.
+- **Palantir Technologies Inc. (PLTR)**, achieved a one-year return of 142.30% and an HQM score of 97.0
+- **Constellation Energy Corp (CEG)**, reported a 133.89% return and an HQM score of 83.0. <br><br>
+
+The detailed results demonstrate the potential for robust portfolio performance by focusing on high-quality momentum stocks. Investors can use this framework to enhance their strategies and optimize their investment decisions based on strong momentum indicators.
 
 ---
 
