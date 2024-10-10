@@ -46,7 +46,7 @@ Graphical representation of optimal portfolios that offer the maximum expected r
 **Example:** <br>
 Assuming there are only two hypothetical companies in an economy, here is an example of the portfolio's efficient frontier constructed on Microsoft Excel:
 
-![Efficient Frontier Example](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Eff%20Frontier%20example.png)
+![Efficient Frontier Example](assets/Eff_Frontier_Example.png)
 
 
 This is precisely what Markowitz suggests: There is a set of efficient portfolios that can provide a higher expected rate of return for the same or even lower risk. This group of portfolios is called the Efficient Frontier.
@@ -652,12 +652,12 @@ Portfolio optimized to minimize volatility while achieving a target return of 20
   3. Expected Volatility: 19.33%
   4. Sharpe Ratio: 0.8170
 ```
-![Optimized](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/output_10_2.png)
+![Optimized](assets/Opt_V_SP.png)
 
 ```
 B. Markowitz Portfolio Analysis:
 ```
-![Interactive Eff Frontier](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/output_10_5.png)
+![Interactive Eff Frontier](assets/Eff_Frontier.png)
 ```
 Efficient Frontier Portfolios:
 
@@ -686,9 +686,9 @@ Efficient Frontier Portfolios:
   4. Sharpe Ratio:1.0692
 ```
 
-![Min Volatility](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/output_10_7.png)
-![Max Return](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/output_10_9.png)
-![Max Sharpe](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/output_10_11.png)
+![Min Volatility](assets/Min_V_SP.png)
+![Max Return](assets/MaxRet_V_SP.png)
+![Max Sharpe](assets/MaxShar_V_SP.png)
 
 
 ## Analysis

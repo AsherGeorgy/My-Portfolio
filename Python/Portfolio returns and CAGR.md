@@ -47,7 +47,7 @@ MSFT_data = MSFT.history(start=startDate, end=endDate)
 ```python
 MSFT_data.head()
 ```
-![MSFT_data.head](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(238).png)
+![MSFT_data.head](assets/MSFT_Data_Head.png)
 
 ### Simple Rate of Return
 In general, it is preferable to use **simple returns** when calculating the returns of multiple securities in the same period. **Log returns** are a better choice when calculating the return of a single security over multiple time periods.
@@ -65,7 +65,7 @@ MSFT_data1 = MSFT_data1.dropna()
 
 print (MSFT_data1['Daily Simple Returns'])
 ```
-![Simple Returns](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(23).png)
+![Simple Returns](assets/MSFT_Simple_Returns.png)
 
 ```python
 # Calculate average daily and annualized simple returns
@@ -121,7 +121,7 @@ def annualized_simple_return(ticker, StartDay, StartMonth, StartYear, EndDay, En
 annualized_simple_return('MSFT', 2, 3, 2023, 2, 3, 2024)
 
 ```
-![annualized_simple_return](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(239).png)
+![annualized_simple_return](assets/MSFT_Ann_SR.png)
 
 ### Log Return
 
@@ -189,7 +189,7 @@ def annualized_log_returns(ticker, StartDay, StartMonth, StartYear, EndDay, EndM
 # Example usage with 252 trading days in a year
 annualized_log_returns('MSFT', 2, 3, 2023, 2, 3, 2024, trading_days_in_year=252)
 ```
-![annualized_log_returns](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(240).png)
+![annualized_log_returns](assets/MSFT_Ann_LR.png)
 
 ### Cumulative Return and CAGR
 
@@ -252,7 +252,7 @@ def calculate_cumulative_return_and_cagr(ticker, startday, startmonth, startyear
 calculate_cumulative_return_and_cagr('MSFT', 2, 3, 2019, 2, 3, 2024)
 
 ```
-![calculate_cumulative_return_and_cagr](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(241).png)
+![calculate_cumulative_return_and_cagr](assets/MSFT_Cr_Cagr.png)
 
 ## <u> Portfolio
 
@@ -274,7 +274,7 @@ for t in tickers_list:
 
 stock_data.head()
 ```
-![stock_data.head](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(245).png)
+![stock_data.head](assets/Port_Data_Head.png)
 
 ### Calculating weighted average rate of return:
 
@@ -375,7 +375,7 @@ end_date = datetime.datetime(2023, 12, 31)
 portfolio_return_cagr(tickers_list, weights, start_date, end_date)
 
 ```
-![portfolio_return_cagr](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Python/Screenshot%20(242).png)
+![portfolio_return_cagr](assets/Port_Price_Movement.png)
 
 ## Summary
 
