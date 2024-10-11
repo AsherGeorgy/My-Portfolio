@@ -1,6 +1,5 @@
-## Hosts work done that involves finance and/or data manipulation tools such as Excel and Python. 
+# Project Repository
 
-To do:
-- Add skills section to highlight the skills acquired
-- On LinkedIn, include link in the "Projects" or "About" section. 
-- CPD: Section that outlines current learning goals and projects planned to undertake.
+Welcome to my project repository! This space hosts the various projects I've completed along with their related assets. It was created so that visitors to my [personal portfolio website](https://ashergeorgy.github.io/portfolio.html) can view the full project codes.
+
+Thank you for visiting!
