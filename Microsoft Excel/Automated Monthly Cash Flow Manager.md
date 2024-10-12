@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Excel based system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month. Download it [here](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Expense.Register.xlsx)
+This Excel based system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month. Download it [here](https://github.com/AsherGeorgy/My-Portfolio/raw/refs/heads/main/Microsoft%20Excel/assets/Cash%20Flow%20Manager.xlsx)
 
 ## How It Works
 
@@ -24,11 +24,12 @@ This cash register system has streamlined transaction tracking, providing an eff
 </br>
 
 #### Screenshots:
-![Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Register.png)
+**Cash Flow Register**
+![Register](assets/Register.png)
 
 ---
-
-![Summary](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Summary.png)
+**Monthly Summary**
+![Summary](assets/Summary.png)
 
 ---
 
