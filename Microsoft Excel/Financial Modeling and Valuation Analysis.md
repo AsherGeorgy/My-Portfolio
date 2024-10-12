@@ -50,4 +50,4 @@ This financial model was originally created by [Financial Analyst Network](http:
 
 ## Screenshots
 **Dashboard:**  
-    ![Dashboard](https://github.com/ashergeo/My-Portfolio/blob/gh-pages/assets/Microsoft%20Excel/Picture2.png?raw=true)
+    ![Dashboard](assets/Dashboard.png)
