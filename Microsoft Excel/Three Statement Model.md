@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a three-statement financial model made with Excel for a firm in the consumer goods sector. The model ([download](https://github.com/AsherGeorgy/My-Portfolio/raw/refs/heads/main/Microsoft%20Excel/assets/3S%20Model%20&%20Scenario%20Analysis.xlsx) includes the following components:
+This is a three-statement financial model made with Excel for a firm in the consumer goods sector. The model [(download)](https://github.com/AsherGeorgy/My-Portfolio/raw/refs/heads/main/Microsoft%20Excel/assets/3S%20Model%20&%20Scenario%20Analysis.xlsx) includes the following components:
 
 1. **Workings:**
    - Cleaned and processed data ready for analysis. 
