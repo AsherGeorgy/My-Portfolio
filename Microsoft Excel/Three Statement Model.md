@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a three-statement financial model made with Excel for a firm in the consumer goods sector. The model ([download](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/3S%20Model%20&%20Scenario%20Analysis.xlsx)) includes the following components:
+This is a three-statement financial model made with Excel for a firm in the consumer goods sector. The model ([download](https://github.com/AsherGeorgy/My-Portfolio/raw/refs/heads/main/Microsoft%20Excel/assets/3S%20Model%20&%20Scenario%20Analysis.xlsx) includes the following components:
 
 1. **Workings:**
    - Cleaned and processed data ready for analysis. 
@@ -44,32 +44,32 @@ This is a three-statement financial model made with Excel for a firm in the cons
 
 ## Screenshots
 **Forecast P&L:**  
-    ![Forecast P&L](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Forecast%20P&L.png)
+    ![Forecast P&L](assets/Forecast%20P&L.png)
 
 ---
 
 **Forecast Balance Sheet:**   
-    ![Forecast Balance Sheet](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Forecast%20Balance%20Sheet.png) 
+    ![Forecast Balance Sheet](assets/Forecast%20Balance%20Sheet.png) 
 
 ---
 
 **Forecast Cash Flow Statement:**  
-    ![Forecast Cash Flow Statement](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Forecast%20Cash%20Flow.png)  
+    ![Forecast Cash Flow Statement](assets/Forecast%20Cash%20Flow.png)  
 
 ---
 
 **Schedule 1: Fixed Asset Roll Forward:**  
-    ![Fixed Asset Roll Forward](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Schedule%201.png)  
+    ![Fixed Asset Roll Forward](assets/Schedule%201.png)  
 
 ---
 
 **Schedule 2: Financial Liabilities:**  
-    ![Financial Liabilities](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Schedule%202.png) 
+    ![Financial Liabilities](assets/Schedule%202.png) 
 
 ---
 
 **Schedule 3: Equity Schedule:**  
-    ![Equity Schedule](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Schedule%203.png)  
+    ![Equity Schedule](assets/Schedule%203.png)  
 
 ---
 
