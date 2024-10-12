@@ -1,10 +1,10 @@
-# Bank Statement Processing and Analysis
+# Bank Statement Analysis and Cash Flow Report
 
 ## Overview
 
 This project involves processing raw bank statements of a firm to create a user-friendly and interactive Excel file that summarizes the financial transactions. The Excel file utilizes various data processing and visualization techniques to provide insights into the firm’s financial activities.
 
-**Download the Excel file [here](https://github.com/ashergeo/My-Portfolio/raw/main/assets/Microsoft%20Excel/Abraham%20Properties%202023.xlsx).**
+**Download the Excel file [here](https://github.com/AsherGeorgy/My-Portfolio/raw/refs/heads/main/Microsoft%20Excel/assets/Cash%20Flow%20Report.xlsx).**
 
 ## Objectives and Skills
 
@@ -56,15 +56,15 @@ Firms often need to analyze their financial transactions to manage cash flow, mo
 
 - **Checking Account**:
   
-  ![Checking Account](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Checking%20Account.png)
+  ![Checking Account]assets/Checking Account.png)
   
 - **Individual Accounts**:
   
-  ![Individual Accounts](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Individual%20Accounts.png)
+  ![Individual Accounts](assets/Individual Accounts.png)
   
 - **Check Register**:
   
-  ![Check Register](https://github.com/ashergeo/My-Portfolio/blob/main/assets/Microsoft%20Excel/Check%20Register.png)
+  ![Check Register](assets/Check Register.png)
 
 ## Replication Instructions
 
