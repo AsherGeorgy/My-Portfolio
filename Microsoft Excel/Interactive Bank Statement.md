@@ -56,15 +56,15 @@ Firms often need to analyze their financial transactions to manage cash flow, mo
 
 - **Checking Account**:
   
-  ![Checking Account]assets/Checking Account.png)
+  ![Checking Account]assets/Checking_Account.png)
   
 - **Individual Accounts**:
   
-  ![Individual Accounts](assets/Individual Accounts.png)
+  ![Individual Accounts](assets/Individual_Accounts.png)
   
 - **Check Register**:
   
-  ![Check Register](assets/Check Register.png)
+  ![Check Register](assets/Check_Register.png)
 
 ## Replication Instructions
 
