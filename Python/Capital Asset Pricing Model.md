@@ -1,4 +1,4 @@
-# **Capital Asset Pricing Model (CAPM)**
+# **CAPM Analysis and Risk-Return Evaluation**
 
 ## Table of Contents
 1. [Introduction](#introduction)
