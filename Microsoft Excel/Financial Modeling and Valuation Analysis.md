@@ -1,6 +1,9 @@
 # Financial Modeling and Valuation Analysis 
 
-This Excel based financial model [(download)](https://github.com/ashergeo/My-Portfolio/raw/gh-pages/assets/Microsoft%20Excel/3S%20Model%20&%20Scenario%20Analysis.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis. 
+This Excel based financial model [(download)](https://github.com/AsherGeorgy/My-Portfolio/raw/refs/heads/main/Microsoft%20Excel/assets/3S%20and%20DCF%20Model%20.xlsx) is designed for dynamic three-statement modeling, scenario analysis, discounted cash flow (DCF) valuation and sensitivity analysis. 
+
+## Acknowledgment
+This financial model was originally created by [Financial Analyst Network](http://www.youtube.com/@financialanalystnetwork) on YouTube. Their insightful video provided the foundation for this model, and I appreciate their work in making financial modeling more accessible.
 
 ## Project Overview
 • Comprehensive financial model to analyze company performance and valuation, incorporating the three financial statements: Income Statement, Balance Sheet, and Cash Flow Statement.  
