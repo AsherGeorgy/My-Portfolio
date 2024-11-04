@@ -1,1 +1,0 @@
-cd "C:\Users\georg\Documents\Personal Page\Full Projects\My-Portfolio"
